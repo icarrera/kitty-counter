@@ -1,5 +1,6 @@
 'use strict';
 var randomNumber1, randomNumber2;
+document.getElementById("answer").focus();
 
 var printQuestion = document.getElementById('printQuestion');
 //function that gives randomNumber1 and randomNumber2 random content between 0-11
