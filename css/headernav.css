@@ -7,6 +7,24 @@ ul {
   list-style-type: none;
   }
 
+  .navstyle {
+    display: flex;
+    justify-content: center;
+  }
+
+.shadows {
+  text-decoration: none;
+  color: #ccc;
+  font: 25px/1 Helvetica, Verdana, sans-serif;
+  text-transform: uppercase;
+
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
 li {
   height: 25px;
   float: left;
@@ -39,9 +57,4 @@ li a:hover {
 li.active a {
   font-weight: bold;
   color: #333;
-}
-
-.navstyle {
-  display: flex;
-  justify-content: center;
 }
