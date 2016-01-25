@@ -5,7 +5,7 @@ nav {
 ul {
   overflow: auto;
   list-style-type: none;
-}
+  }
 
 li {
   height: 25px;
@@ -39,4 +39,9 @@ li a:hover {
 li.active a {
   font-weight: bold;
   color: #333;
+}
+
+.navstyle {
+  display: flex;
+  justify-content: center;
 }
