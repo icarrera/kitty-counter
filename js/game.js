@@ -20,7 +20,7 @@ function questionRandomizer(event) {
 	event.preventDefault(); //stop the default behavior of the submit event
   //store the new inputs as new objects for ease of use
   var answer = parseFloat(event.target.answer.value);
-
+//if/else statement, judges whether the input is correct
   if (answer === (randomNumber1 + randomNumber2)) {
     console.log('Great job!');
     kittyCounter += 1
