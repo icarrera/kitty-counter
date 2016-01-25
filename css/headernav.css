@@ -1,3 +1,5 @@
+/*Nav Style from: http://codepen.io/sahilpopli/pen/jcqBk */
+
 nav {
   margin: 50px;
 }
@@ -18,6 +20,8 @@ ul {
     flex-direction: row;
     justify-content: center;
   }
+
+/*insert styling for whitecat1 and whitecat2 here*/
 
 .shadows {
   text-decoration: none;
