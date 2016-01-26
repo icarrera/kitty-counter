@@ -60,10 +60,18 @@ var handleCountdown = function(){
   }, 1000);
 })();
 }
+
+// function that reps the link to score.html
+var showScoreLink = function(){
+  var scoreLink = document.getElementById('scoreLink');
+  scoreLink.style.visibility = 'hidden';
+}
+showScoreLink();
 //game timer
 var handleGameClock = function() {
   (function() {
     var gameCounter = 25;
+    showScoreLink();
     setInterval(function() {
       gameCounter--;
       var gameClock = document.getElementById('gameClock');
@@ -81,6 +89,7 @@ var handleGameClock = function() {
       if (gameCounter === -1) {
         gameClock.style.visibility = 'hidden';
         clearInterval(gameCounter);
+        scoreLink.style.visibility = 'visible';
       };
     }, 1000);
   })();
