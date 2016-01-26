@@ -1,6 +1,12 @@
 'use strict';
+var userScore = localStorage.getItem('scorePersist');
+if (userScore) {
+  kittyCounter = JSON.parse(userScore);
+} else {
+  localStorage.setItem('scorePersist',JSON.stringify(kittyCounter));
+}
 // the code below will display the user's score, but needs the local storage component in place to be functional.
-// document.getElementById('your-score').innerHTML = "You got " + (insert local storage key here) + " kitties!";
+
 var kittyCounter = 0;
 var randomNumber1, randomNumber2;
 document.getElementById("answer").focus();
@@ -30,11 +36,13 @@ function questionRandomizer(event) {
     console.log('Great job!');
     kittyCounter += 1;
     event.target.answer.value = null;
+    localStorage.setItem('scorePersist',JSON.stringify(kittyCounter));
     getRandomNumber();
   }
     else {
         console.log('not the right answer')
         event.target.answer.value = null;
+        localStorage.setItem('scorePersist',JSON.stringify(kittyCounter));
         getRandomNumber();
   }
 }
