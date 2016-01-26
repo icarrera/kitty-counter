@@ -2,6 +2,7 @@
 var kittyCounter = 0;
 var randomNumber1, randomNumber2;
 document.getElementById("answer").focus();
+var gameInput = document.getElementById('gameInput');
 
 var printQuestion = document.getElementById('printQuestion');
 //function that gives randomNumber1 and randomNumber2 random content between 0-11
@@ -37,6 +38,8 @@ function questionRandomizer(event) {
 }
 //event listener for the answer form
 element.addEventListener('submit', questionRandomizer);
+//hides input and question display for the games until game starts
+gameInput.style.visibility = 'hidden';
 
 var counter = ''
 //countdown to game start
@@ -51,6 +54,8 @@ var handleCountdown = function(){
       span.innerHTML = counter;
     }
     if (counter === 0) {
+      gameInput.style.visibility = 'visible';
+      document.getElementById("answer").focus();
       span.innerHTML = 'GO!';
     }
     if (counter < 0) {
@@ -75,7 +80,6 @@ var handleGameClock = function() {
     setInterval(function() {
       gameCounter--;
       var gameClock = document.getElementById('gameClock');
-      var gameInput = document.getElementById('gameInput');
       gameClock.innerHTML = gameCounter;
       if (gameCounter > 20) {
         gameClock.style.visibility = 'hidden';
@@ -85,11 +89,11 @@ var handleGameClock = function() {
       }
       if (gameCounter === 0) {
         gameClock.innerHTML = 'Time\'s Up!';
+        gameInput.style.visibility = 'hidden';
         clearInterval(gameCounter);
       };
       if (gameCounter === -1) {
         gameClock.style.visibility = 'hidden';
-        gameInput.style.visibility = 'hidden';
         scoreLink.style.visibility = 'visible';
         clearInterval(gameCounter);
       };
