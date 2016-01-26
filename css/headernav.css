@@ -8,7 +8,7 @@ ul {
   overflow: auto;
   list-style-type: none;
   }
-  header {
+header {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
