@@ -12,6 +12,15 @@ function submitCommentForm(event) {
   console.log("Name: " + contactName);
   console.log("Email:" + contactEmail);
   console.log("Comments: " + contactComments);
+  var body = "Name: " + contactName + "\r\n";
+  body += "Email address: " + contactEmail + "\r\n\r\n";
+  body += contactComments;
+  var subject = "Comment from Kitty Counter About Us page";
+  var uri = "mailto:kittycounter201d5@gmail.com?subject=";
+  uri += encodeURIComponent(subject);
+  uri += "&body=";
+  uri += encodeURIComponent(body);
+  window.open(uri);
   contactForm.reset();
 }
 
