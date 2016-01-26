@@ -55,6 +55,7 @@ var handleCountdown = function(){
     }
     if (counter === 0) {
       gameInput.style.visibility = 'visible';
+      document.getElementById("answer").focus();
       span.innerHTML = 'GO!';
     }
     if (counter < 0) {
