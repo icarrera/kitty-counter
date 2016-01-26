@@ -2,7 +2,7 @@ var playerName = document.getElementById('name');
 var playerEmail = document.getElementById('email');
 var playerComments = document.getElementById('comments');
 var submitButton = document.getElementById('contactSubmit');
-var contactForm = document.getElementById('contactUs');
+var contactForm = document.getElementById('contactForm');
 
 function submitCommentForm(event) {
   event.preventDefault();
