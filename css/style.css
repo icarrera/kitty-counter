@@ -16,6 +16,10 @@ h1.shadows {
   margin: 1%;
 }
 
+p {
+  font-family: 'Montserrat', sans-serif;
+}
+
 section.howToPlay {
   display: flex;
   justify-content: center;
