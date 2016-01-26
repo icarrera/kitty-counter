@@ -1,4 +1,6 @@
 'use strict';
+// the code below will display the user's score, but needs the local storage component in place to be functional.
+// document.getElementById('your-score').innerHTML = "You got " + (insert local storage key here) + " kitties!";
 var kittyCounter = 0;
 var randomNumber1, randomNumber2;
 document.getElementById("answer").focus();
@@ -105,6 +107,7 @@ var hideInstructions = function(){
   var instruct = document.getElementById('instructions');
   instruct.style.visibility = 'hidden'
 }
+
 
 var button = document.getElementById('startGame');
 startGame.addEventListener('click', handleCountdown);
