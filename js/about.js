@@ -11,7 +11,7 @@ function submitCommentForm(event) {
   var contactComments = event.target.comments.value;
   console.log("Name: " + contactName);
   console.log("Email:" + contactEmail);
-  console.log("Comments " + contactComments);
+  console.log("Comments: " + contactComments);
 }
 
 contactForm.addEventListener('submit', submitCommentForm);
