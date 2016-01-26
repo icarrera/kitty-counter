@@ -6,10 +6,6 @@ if (userScore) {
   localStorage.setItem('scorePersist',JSON.stringify(kittyCounter));
 }
 // the code below will display the user's score, but needs the local storage component in place to be functional.
-var printScore = document.getElementById('your-score');
-// console.log('You got ' + JSON.parse('scorePersist') + ' kitties!');
-printScore.textContent = 'You got ' + JSON.parse('scorePersist') + ' kitties!';
-
 
 var kittyCounter = 0;
 var randomNumber1, randomNumber2;
