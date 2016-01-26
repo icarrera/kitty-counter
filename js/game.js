@@ -26,7 +26,7 @@ function questionRandomizer(event) {
 //if/else statement, judges whether the input is correct
   if (answer === (randomNumber1 + randomNumber2)) {
     console.log('Great job!');
-    kittyCounter += 1
+    kittyCounter += 1;
     event.target.answer.value = null;
     getRandomNumber();
   }
