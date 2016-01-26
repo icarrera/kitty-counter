@@ -1,4 +1,5 @@
 'use strict';
+var kittyCounter = 0;
 var randomNumber1, randomNumber2;
 document.getElementById("answer").focus();
 
