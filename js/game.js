@@ -75,6 +75,7 @@ var handleGameClock = function() {
     setInterval(function() {
       gameCounter--;
       var gameClock = document.getElementById('gameClock');
+      var gameInput = document.getElementById('gameInput');
       gameClock.innerHTML = gameCounter;
       if (gameCounter > 20) {
         gameClock.style.visibility = 'hidden';
@@ -88,8 +89,9 @@ var handleGameClock = function() {
       };
       if (gameCounter === -1) {
         gameClock.style.visibility = 'hidden';
-        clearInterval(gameCounter);
+        gameInput.style.visibility = 'hidden';
         scoreLink.style.visibility = 'visible';
+        clearInterval(gameCounter);
       };
     }, 1000);
   })();
