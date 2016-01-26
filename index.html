@@ -2,18 +2,20 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <link href='https://fonts.googleapis.com/css?family=Shadows+Into+Light+Two' rel='stylesheet' type='text/css'>
-    <link type="test/css" rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light+Two" rel="stylesheet" type="text/css">
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+    <link type="text/css" rel="stylesheet" href="css/headernav.css">
     <title>KITTY COUNTER</title>
   </head>
-  <header class="container">
+  <header>
+    <!--  whtiecat images Needs Flexbox Styling-->
     <img class="whitecat" src="whitecat.png" alt="" />
-    <p class="shadows">Kitty Counter!</p>
+    <h1 class="shadows">Kitty Counter!</h1>
     <img class="whitecat2" src="whitecat.png" alt="" />
     <hr>
     <nav>
-      <ul>
-        <li><a href="index.html">GAME</a></li>
+      <ul class="navstyle">
+        <li class="active"><a href="index.html">GAME</a></li>
         <li><a href="score.html">SCORE</a></li>
         <li><a href="aboutUs.html">ABOUT US</a></li>
       </ul>
@@ -38,6 +40,6 @@
     <label for="answer" type="text">Answer</label>
     <input id="answer" type="text" maxlength="15" autocomplete="off">
     </form>
-    <script type="text/javascript" script src ="app.js"></script>
+    <script type="text/javascript" script src ="game.js"></script>
   </body>
 </html>
