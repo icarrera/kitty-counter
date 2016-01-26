@@ -38,6 +38,8 @@ function questionRandomizer(event) {
 }
 //event listener for the answer form
 element.addEventListener('submit', questionRandomizer);
+//hides input and question display for the games until game starts
+gameInput.style.visibility = 'hidden';
 
 var counter = ''
 //countdown to game start
@@ -52,6 +54,7 @@ var handleCountdown = function(){
       span.innerHTML = counter;
     }
     if (counter === 0) {
+      gameInput.style.visibility = 'visible';
       span.innerHTML = 'GO!';
     }
     if (counter < 0) {
@@ -85,11 +88,11 @@ var handleGameClock = function() {
       }
       if (gameCounter === 0) {
         gameClock.innerHTML = 'Time\'s Up!';
+        gameInput.style.visibility = 'hidden';
         clearInterval(gameCounter);
       };
       if (gameCounter === -1) {
         gameClock.style.visibility = 'hidden';
-        gameInput.style.visibility = 'hidden';
         scoreLink.style.visibility = 'visible';
         clearInterval(gameCounter);
       };
