@@ -12,6 +12,7 @@ function submitCommentForm(event) {
   console.log("Name: " + contactName);
   console.log("Email:" + contactEmail);
   console.log("Comments: " + contactComments);
+  contactForm.reset();
 }
 
 contactForm.addEventListener('submit', submitCommentForm);
