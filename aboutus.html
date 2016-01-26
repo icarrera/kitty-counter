@@ -63,22 +63,21 @@
 </div>
 </section>
 </div>
-    <form class="contactUs">
+    <form id="contactForm" class="contactUs">
       <fieldset>
       <legend>Contact Us</legend>
 
       <label>Name:<br />
-      <input id="name" type="text" size="20"></label><br />
+      <input name="name" type="text" size="20"></label><br />
 
       <label>E-mail:<br />
-      <input id="email" type="email" size="30"></label><br />
+      <input name="email" type="email" size="30"></label><br />
 
       <label>Comments:<br />
-      <textarea id="comments" type="text">Enter your comments here...</textarea>
+      <textarea name="comments" type="text" placeholder="Enter your comments here..."></textarea>
       </fieldset>
       <button type="submit" id="contactSubmit">Submit</button>
     </form>
-
-
+    <script src="js/about.js"></script>
   </body>
 </html>
