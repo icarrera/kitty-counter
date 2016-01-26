@@ -2,6 +2,7 @@
 var kittyCounter = 0;
 var randomNumber1, randomNumber2;
 document.getElementById("answer").focus();
+var gameInput = document.getElementById('gameInput');
 
 var printQuestion = document.getElementById('printQuestion');
 //function that gives randomNumber1 and randomNumber2 random content between 0-11
@@ -75,7 +76,6 @@ var handleGameClock = function() {
     setInterval(function() {
       gameCounter--;
       var gameClock = document.getElementById('gameClock');
-      var gameInput = document.getElementById('gameInput');
       gameClock.innerHTML = gameCounter;
       if (gameCounter > 20) {
         gameClock.style.visibility = 'hidden';
