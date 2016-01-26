@@ -60,13 +60,22 @@ var handleCountdown = function(){
   }, 1000);
 })();
 }
+
+// function that reps the link to score.html
+var showScoreLink = function(){
+  var scoreLink = document.getElementById('scoreLink');
+  scoreLink.style.visibility = 'hidden';
+}
+showScoreLink();
 //game timer
 var handleGameClock = function() {
   (function() {
     var gameCounter = 25;
+    showScoreLink();
     setInterval(function() {
       gameCounter--;
       var gameClock = document.getElementById('gameClock');
+      var gameInput = document.getElementById('gameInput');
       gameClock.innerHTML = gameCounter;
       if (gameCounter > 20) {
         gameClock.style.visibility = 'hidden';
@@ -80,6 +89,8 @@ var handleGameClock = function() {
       };
       if (gameCounter === -1) {
         gameClock.style.visibility = 'hidden';
+        gameInput.style.visibility = 'hidden';
+        scoreLink.style.visibility = 'visible';
         clearInterval(gameCounter);
       };
     }, 1000);
