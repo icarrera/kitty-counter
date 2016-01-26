@@ -1,0 +1,17 @@
+
+/*changes the section within the header to a flexbox for all html pages*/
+.kittyTitle {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+}
+
+h1.shadows {
+  font-size: 500%;
+  font-family: 'Amatic SC', cursive;
+  color: #5EC4B7;
+  padding: 1%;
+  margin: 1%;
+}
