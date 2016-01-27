@@ -1,6 +1,5 @@
 'use strict';
 //array of cat images
-var randomCatSpotX, randomCatSpotY;
 var imageArray = [];
 var imageNameArray = ['kittyimg1.png', 'kittyimg2.jpg', 'kittyimg3.png',
                       'kittyimg4.png', 'kittyimg5.png', 'kittyimg6.png',
