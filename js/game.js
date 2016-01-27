@@ -12,6 +12,15 @@ function loadImages () {
       imageArray[i].alt = 'Kitty #' + (i + 1);
       }
     }
+//function that randomizes a cat image from the array
+function randomCatImage() {
+  var arrLength = imageArray.length;
+  return imageArray[Math.floor(Math.random() * arrLength)];
+  }
+//getting the canvas element globally
+var canvasPort = document.getElementById('viewport');
+var ctx = canvasPort.getContext('2d');
+
 
 
 
