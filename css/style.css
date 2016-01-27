@@ -16,6 +16,39 @@ h1.shadows {
   margin: 1%;
 }
 
+.catContainer {
+  /*height: 1000px;*/
+  display: flex;
+  /*flex-direction: row-reverse;;*/
+  /*flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column wrap-reverse;
+  align-content: space-between;*/
+}
+
+.kittypic {
+  visibility: hidden;
+}
+
+.leftSide {
+  flex-flow: column;
+  align-content: space-between;
+  justify-content: center;
+  display: flex;
+  /*flex-direction: column;*/
+}
+
+.rightSide {
+  flex-flow: column wrap-reverse;
+  align-content: space-between;
+  /*justify-content: center;*/
+  justify-content: start;
+  display: flex;
+  /*flex-direction: column;*/
+  /*align-self: flex-end;*/
+}
+
 .kittypic {
   width: 300px;
   height: 300px;
