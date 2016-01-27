@@ -6,15 +6,16 @@ var imageNameArray = ['kittyimg1.png', 'kittyimg2.jpg', 'kittyimg3.png',
                       'kittyimg4.png', 'kittyimg5.png', 'kittyimg6.png',
                       'kittyimg7.png'];
 //function that randomizes a number between 0-300
-function randomCatNapSpot() {
-      var topOfRange = 300;
-      return Math.floor(Math.random() * topOfRange);
+function randomKittehCoord(range) {
+      // var topOfRange = 300;
+      return Math.floor(Math.random() * range);
   }
 //create random x and y cordinates for printing on canvas
 function findSpotXY () {
-  randomCatSpotX = randomCatNapSpot();
-  randomCatSpotY = randomCatNapSpot();
+  randomCatSpotX = randomKittehCoord(300);
+  randomCatSpotY = randomKittehCoord(300);
   }
+
 //function that loads the images into the new array
 function loadImages () {
   for(var i = 0; i < imageNameArray.length; i += 1) {
