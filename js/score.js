@@ -11,7 +11,7 @@ if (parseInt(kittyScore) === 0) {
 } else if (parseInt(kittyScore) >= 6 & parseInt(kittyScore) <= 8) {
   printScore.textContent = 'You got ' + kittyScore + ' kitties. You are a cat taking a bath, you aren’t happy but you’re at least a cat.';
 } else if (parseInt(kittyScore) >= 8 & parseInt(kittyScore) <= 10) {
-  printScore.textContent = 'You got ' + kittyScore + ' kitties. You are a a cat on a walk';
+  printScore.textContent = 'You got ' + kittyScore + ' kitties. You are a cat on a walk';
 } else if (parseInt(kittyScore) >= 11 & parseInt(kittyScore) <= 13) {
   printScore.textContent = 'You got ' + kittyScore + ' kitties. You are a a cat wearing a holiday sweater';
 } else if (parseInt(kittyScore) >= 14 & parseInt(kittyScore) <= 19) {
