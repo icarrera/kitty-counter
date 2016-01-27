@@ -10,11 +10,6 @@ function randomMeow(range) {
       // var topOfRange = 300;
       return Math.floor(Math.random() * range);
   }
-//create random x and y cordinates for printing on canvas
-// function findSpotXY () {
-//   randomCatSpotX = randomMeow(300);
-//   randomCatSpotY = randomMeow(300);
-//   }
 
 //function that loads the images into the new array
 function loadImages () {
@@ -31,15 +26,12 @@ function randomCatImage() {
   }
 //getting the canvas element globally
 var canvasPort = document.getElementById('viewport');
-// var canvasSizeX = canvasPort.width;
-// var canvasSizeY = canvasPort.height;
 var picSize = 200;
 var xMax = canvasPort.width - (picSize / 2);
 var yMax = canvasPort.height - (picSize / 2);
 var ctx = canvasPort.getContext('2d');
 //function that needs to be call within our correctness checker
 function loadKitteh() {
-  // findSpotXY ();
   loadImages();
   var iHazKittehImage = randomCatImage();
   iHazKittehImage.onload = function () {
@@ -65,8 +57,8 @@ var gameInput = document.getElementById('gameInput');
 var printQuestion = document.getElementById('printQuestion');
 //function that gives randomNumber1 and randomNumber2 random content between 0-11
 function getRandomNumber () {
-    randomNumber1 = Math.floor(Math.random() * (10 - 1 + 1)) + 1;
-    randomNumber2 = Math.floor(Math.random() * (10 - 1 + 1)) + 1;
+    randomNumber1 = randomMeow(10) + 1;
+    randomNumber2 = randomMeow(10) + 1;
     console.log('randomNumber1 is ' + randomNumber1 + '  randomNumber2 is ' + randomNumber2);
     printQuestion.textContent = randomNumber1 + ' + ' + randomNumber2 + ' =';
 }
