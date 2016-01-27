@@ -21,11 +21,24 @@ header {
     justify-content: center;
   }
 
-/*insert styling for whitecat1 and whitecat2 here*/
+.kittyTitle img {
+  width: 200px;
+  height: 200px;
+  }
+
+.kittyTitle img:hover {
+    -ms-transform: scale(1.5,1.5); /* IE 9 */
+     -webkit-transform: scale(1.5,1.5); /* Chrome, Safari, Opera */
+     transform: scale(1.5,1.5);
+  }
+
+.kittyTitle {
+  color: black;
+}
 
 .shadows {
   text-decoration: none;
-  color: #ccc;
+  color: black;
   font: 25px/1 Helvetica, Verdana, sans-serif;
   text-transform: uppercase;
 
