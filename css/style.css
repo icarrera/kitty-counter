@@ -8,6 +8,10 @@
   font-style:normal;
 }
 
+/**{
+  background-color: #dddfd4;
+}*/
+
 /*changes the section within the header to a flexbox for all html pages*/
 .kittyTitle {
   display: flex;
@@ -21,7 +25,7 @@ h1.shadows {
   font-size: 500%;
   /*font-family: 'Amatic SC', cursive;*/
   font-family: "LMS Cat Treats", cursive;
-  color: #5EC4B7;
+  color: #300032;
   padding: 1%;
   margin: 1%;
   text-align: center;
@@ -69,6 +73,8 @@ width: 50%;
 height: auto;
 padding: 1%;
 margin: 1%;
+text-align: center;
+border: 1px solid black;
 }
 #startGame {
   box-shadow: 0px 0px 8px black;
@@ -76,16 +82,20 @@ margin: 1%;
   font-family: Tahoma, sans-serif;
   font-size: 100%;
   font-weight: bold;
-  border-radius: 30px;
+  border-radius: 15px;
   margin: 1%;
-  border: 1px solid white;
-  text-shadow: 1px 1px white;
+  border: 1px solid black;
+  /*text-shadow: 1px 1px white;*/
 }
 #submitAnswer {
   background-color: #5EC4B7;
   padding: 2%;
 }
 #scoreLink {
-  font-size: 100%;
-  color: purple;
+  display: flex;
+  font-size: 24px;
+  color: black;
+  width:100%;
+  justify-content: center;;
+  text-decoration: none;
 }
