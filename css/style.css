@@ -8,9 +8,10 @@
   font-style:normal;
 }
 
-/**{
-  background-color: #dddfd4;
-}*/
+*{
+  font-family: Helvetica, Verdana, sans-serif;
+  color: #300032;
+}
 
 /*changes the section within the header to a flexbox for all html pages*/
 .kittyTitle {
@@ -31,9 +32,9 @@ h1.shadows {
   text-align: center;
 }
 
-p {
+/*p {
   font-family: 'Montserrat', sans-serif;
-}
+}*/
 
 section.howToPlay {
   display: flex;
@@ -57,7 +58,6 @@ section#gameInput {
 p#printQuestion {
   font-size: 400%;
   font-weight: bolder;
-  font-family: Tahoma, sans-serif;
   background-color: #5EC4B7;
   padding: 2%;
   margin: 1%;
@@ -76,10 +76,13 @@ margin: 1%;
 text-align: center;
 border: 1px solid black;
 }
+p#instructions b{
+background-color:#CAA2DD;
+}
+
 #startGame {
   box-shadow: 0px 0px 8px black;
   background-color: #5EC4B7;
-  font-family: Tahoma, sans-serif;
   font-size: 100%;
   font-weight: bold;
   border-radius: 15px;
@@ -91,11 +94,25 @@ border: 1px solid black;
   background-color: #5EC4B7;
   padding: 2%;
 }
+
+#submitAnswer label{
+  background-color: #5EC4B7;
+}
+
 #scoreLink {
   display: flex;
   font-size: 24px;
-  color: black;
   width:100%;
   justify-content: center;;
   text-decoration: none;
+}
+
+#scorebox {
+  width: 100%;
+  text-align: center;
+}
+
+#kitty-links p{
+  width: 100%;
+  text-align: center;
 }
