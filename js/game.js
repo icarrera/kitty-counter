@@ -25,7 +25,7 @@ function randomCatImage() {
   }
 //getting the canvas element globally
 var canvasPort = document.getElementById('viewport');
-var picSize = 200;
+var picSize = 100;
 var xMax = canvasPort.width - (picSize / 2);
 var yMax = canvasPort.height - (picSize / 2);
 var ctx = canvasPort.getContext('2d');
