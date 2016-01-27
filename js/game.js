@@ -1,4 +1,20 @@
 'use strict';
+//array of cat images
+var imageArray = [];
+var imageNameArray = ['kittyimg1.png', 'kittyimg2.jpg', 'kittyimg3.png',
+                      'kittyimg4.png', 'kittyimg5.png', 'kittyimg6.png',
+                      'kittyimg7.png'];
+//function that loads the images into the new array
+function loadImages () {
+  for(var i = 0; i < imageNameArray.length; i += 1) {
+      imageArray[i] = new Image();
+      imageArray[i].src = 'img/' + imageNameArray[i];
+      imageArray[i].alt = 'Kitty #' + (i + 1);
+      }
+    }
+
+
+
 var userScore = localStorage.getItem('scorePersist');
 if (userScore) {
   kittyCounter = JSON.parse(userScore);
