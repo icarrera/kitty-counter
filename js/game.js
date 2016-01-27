@@ -80,16 +80,13 @@ function questionRandomizer(event) {
 //sound if answer correct
     var audio = new Audio('audio/kitten.mp3');
     audio.play();
-    event.target.answer.value = null;
-    localStorage.setItem('scorePersist',JSON.stringify(kittyCounter));
-    getRandomNumber();
   }
     else {
-        console.log('not the right answer')
-        event.target.answer.value = null;
-        localStorage.setItem('scorePersist',JSON.stringify(kittyCounter));
-        getRandomNumber();
+      console.log('not the right answer')
   }
+  event.target.answer.value = null;
+  localStorage.setItem('scorePersist',JSON.stringify(kittyCounter));
+  getRandomNumber();
 }
 //event listener for the answer form
 element.addEventListener('submit', questionRandomizer);
