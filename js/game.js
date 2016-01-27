@@ -80,6 +80,9 @@ function questionRandomizer(event) {
     console.log('Great job!');
     kittyCounter += 1;
     loadKitteh();
+//sound if answer correct
+    var audio = new Audio('audio/kitten.mp3');
+    audio.play();
     event.target.answer.value = null;
     localStorage.setItem('scorePersist',JSON.stringify(kittyCounter));
     getRandomNumber();
@@ -166,3 +169,16 @@ var button = document.getElementById('startGame');
 startGame.addEventListener('click', handleCountdown);
 startGame.addEventListener('click', handleGameClock);
 startGame.addEventListener('click', hideInstructions);
+
+var audio = document.getElementById("meowsound");
+audio.play();
+var audio = $("#meowsound")[0];
+$("header img").mouseenter(function() {
+  audio.play();
+});
+var audio = document.getElementById("meowsound2");
+audio.play();
+var audio = $("#meowsound2")[0];
+$("header img").mouseenter(function() {
+  audio.play();
+});
