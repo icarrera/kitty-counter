@@ -20,7 +20,14 @@ function randomCatImage() {
 //getting the canvas element globally
 var canvasPort = document.getElementById('viewport');
 var ctx = canvasPort.getContext('2d');
-
+//function that needs to be call within our correctness checker
+function loadKitteh() {
+  loadImages();
+  var iHazKittehImage = randomCatImage();
+  iHazKittehImage.onload = function () {
+    ctx.drawImage(iHazKittehImage, 0, 0, 200, 200);
+  }
+}
 
 
 
