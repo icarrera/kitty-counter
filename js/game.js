@@ -27,7 +27,7 @@ function loadImages () {
 //function that randomizes a cat image from the array
 function randomCatImage() {
   var arrLength = imageArray.length;
-  return imageArray[Math.floor(Math.random() * arrLength)];
+  return imageArray[randomKittehCoord(arrLength)];
   }
 //getting the canvas element globally
 var canvasPort = document.getElementById('viewport');
