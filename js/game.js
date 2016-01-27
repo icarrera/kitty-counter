@@ -1,5 +1,6 @@
 'use strict';
 //array of cat images
+var randomCatSpotX, randomCatSpotY;
 var imageArray = [];
 var imageNameArray = ['kittyimg1.png', 'kittyimg2.jpg', 'kittyimg3.png',
                       'kittyimg4.png', 'kittyimg5.png', 'kittyimg6.png',
@@ -8,6 +9,11 @@ var imageNameArray = ['kittyimg1.png', 'kittyimg2.jpg', 'kittyimg3.png',
 function randomCatNapSpot() {
       var topOfRange = 300;
       return Math.floor(Math.random() * topOfRange);
+  }
+//create random x and y cordinates for printing on canvas
+function findSpotXY () {
+  randomCatSpotX = randomCatNapSpot();
+  randomCatSpotY = randomCatNapSpot();
   }
 //function that loads the images into the new array
 function loadImages () {
@@ -27,10 +33,11 @@ var canvasPort = document.getElementById('viewport');
 var ctx = canvasPort.getContext('2d');
 //function that needs to be call within our correctness checker
 function loadKitteh() {
+  findSpotXY ();
   loadImages();
   var iHazKittehImage = randomCatImage();
   iHazKittehImage.onload = function () {
-    ctx.drawImage(iHazKittehImage, 0, 0, 200, 200);
+    ctx.drawImage(iHazKittehImage, randomCatSpotX, randomCatSpotY, 200, 200);
   }
 }
 
