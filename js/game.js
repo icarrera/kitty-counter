@@ -27,6 +27,7 @@ var numOfCatPics = 7;
 function showCatPic() {
   while(kittyCounter <= numOfCatPics) {
     var newPicNum = Math.floor(Math.random() * numOfCatPics) + 1;
+    console.log(newPicNum + ", " + numOfCatPics);
     // breaks if numOfCatPics < 9 - needs function to add padding
     var newPicElement = document.getElementById('kitty0' + newPicNum);
     if(!(newPicElement.style.visibility === 'visible')) {
@@ -49,7 +50,7 @@ function questionRandomizer(event) {
   if (answer === (randomNumber1 + randomNumber2)) {
     console.log('Great job!');
     kittyCounter += 1;
-    // showCatPic();
+    showCatPic();
     event.target.answer.value = null;
     localStorage.setItem('scorePersist',JSON.stringify(kittyCounter));
     getRandomNumber();
