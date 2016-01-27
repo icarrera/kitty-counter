@@ -1,5 +1,6 @@
 * {
-   font-family: 'Shadows Into Light Two', cursive;
+   font-family: Helvetica, Verdana, sans-serif;
+   color: #300032;
 }
 /*css for about us animation*/
 .flip-container {
@@ -34,7 +35,7 @@
 }
 
 .back {
-  background-color: black;
+  background-color:#300032;
   padding: 5px;
   color: white;
   transform: rotateY(180deg);
@@ -56,4 +57,5 @@
   flex-direction: row;
   display: inline-flex;
   justify-content: space-around;
+  margin-bottom: 20px;
 }

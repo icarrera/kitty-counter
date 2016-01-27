@@ -1,8 +1,11 @@
-
+*{
+  font-family: Helvetica, Verdana, sans-serif;
+  color: #300032;
+}
 #countdownCounter {
   font-size: 100px;
   text-align: center;
-  color: red;
+  color: #5EC4B7;
   margin:1%;
   padding:0%;
   margin-top: -100px;
@@ -11,7 +14,7 @@
 #gameClock {
   font-size: 100px;
   text-align: center;
-  color: Green;
+  color: #300032;
   margin:1%;
   padding:0%;
   margin-top: -100px;
