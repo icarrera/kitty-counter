@@ -67,6 +67,7 @@ function questionRandomizer(event) {
   if (answer === (randomNumber1 + randomNumber2)) {
     console.log('Great job!');
     kittyCounter += 1;
+    loadKitteh();
     event.target.answer.value = null;
     localStorage.setItem('scorePersist',JSON.stringify(kittyCounter));
     getRandomNumber();
