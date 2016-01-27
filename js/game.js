@@ -6,15 +6,15 @@ var imageNameArray = ['kittyimg1.png', 'kittyimg2.jpg', 'kittyimg3.png',
                       'kittyimg4.png', 'kittyimg5.png', 'kittyimg6.png',
                       'kittyimg7.png'];
 //function that randomizes a number between 0-300
-function randomKittehCoord(range) {
+function randomMeow(range) {
       // var topOfRange = 300;
       return Math.floor(Math.random() * range);
   }
 //create random x and y cordinates for printing on canvas
-function findSpotXY () {
-  randomCatSpotX = randomKittehCoord(300);
-  randomCatSpotY = randomKittehCoord(300);
-  }
+// function findSpotXY () {
+//   randomCatSpotX = randomMeow(300);
+//   randomCatSpotY = randomMeow(300);
+//   }
 
 //function that loads the images into the new array
 function loadImages () {
@@ -27,18 +27,23 @@ function loadImages () {
 //function that randomizes a cat image from the array
 function randomCatImage() {
   var arrLength = imageArray.length;
-  return imageArray[randomKittehCoord(arrLength)];
+  return imageArray[randomMeow(arrLength)];
   }
 //getting the canvas element globally
 var canvasPort = document.getElementById('viewport');
+// var canvasSizeX = canvasPort.width;
+// var canvasSizeY = canvasPort.height;
+var picSize = 200;
+var xMax = canvasPort.width - (picSize / 2);
+var yMax = canvasPort.height - (picSize / 2);
 var ctx = canvasPort.getContext('2d');
 //function that needs to be call within our correctness checker
 function loadKitteh() {
-  findSpotXY ();
+  // findSpotXY ();
   loadImages();
   var iHazKittehImage = randomCatImage();
   iHazKittehImage.onload = function () {
-    ctx.drawImage(iHazKittehImage, randomCatSpotX, randomCatSpotY, 200, 200);
+    ctx.drawImage(iHazKittehImage, randomMeow(xMax), randomMeow(yMax), picSize, picSize);
   }
 }
 
