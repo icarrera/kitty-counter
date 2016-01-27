@@ -1,3 +1,12 @@
+@font-face {
+  font-family:"LMS Cat Treats";
+  src:url("LMS_CAT.eot?") format("eot"),
+  url("LMS_CAT.woff") format("woff"),
+  url("LMS_CAT.ttf") format("truetype"),
+  url("LMS_CAT.svg#LMSCatTreats") format("svg");
+  font-weight:normal;
+  font-style:normal;
+}
 
 /*changes the section within the header to a flexbox for all html pages*/
 .kittyTitle {
@@ -10,7 +19,8 @@
 
 h1.shadows {
   font-size: 500%;
-  font-family: 'Amatic SC', cursive;
+  /*font-family: 'Amatic SC', cursive;*/
+  font-family: "LMS Cat Treats", cursive;
   color: #5EC4B7;
   padding: 1%;
   margin: 1%;
