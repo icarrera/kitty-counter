@@ -2,23 +2,16 @@ var printScore = document.getElementById('your-score');
 var kittyScore = localStorage.getItem('scorePersist')
 // printScore.textContent = 'You got ' + kittyScore + ' kitties!';
 
-var scoreAttributeImages = [];
-var attributeImages = ['cucumber.gif','dog.jpg','litterbox.jpg','bath-cat.jpg','sweater_cat.jpg','catnip.jpg','magic_cat.gif'];
+var attributeImages = ['img/cucumber.gif','img/dog.jpg','img/litterbox.jpg','img/bath-cat.jpg','img/sweater_cat.jpg','img/catnip.jpg','img/magic_cat.gif'];
 
-function loadAttributeImages () {
-  for(var i = 0; i < attributeImages.length; i += 1) {
-      scoreAttributeImages[i] = new Image();
-      scoreAttributeImages[i].src = 'img/' + scoreAttributeImages[i];
-      scoreAttributeImages[i].alt = 'Attribute type #' + (i);
-      }
-    }
-
-loadAttributeImages();
-var imagePrint = document.getElementById('finalScore');
+var imagePrint = document.getElementById('finalScoreImg');
 
 if (parseInt(kittyScore) === 0) {
   printScore.textContent = 'You got ' + kittyScore + ' kitties. You are a cucumber, you scare cats';
-  imagePrint.textContent = scoreAttributeImages[0];
+  var kittyImageElement = document.createElement('img');
+  kittyImageElement.setAttribute('src', attributeImages[0]);
+  imagePrint.appendChild(kittyImageElement);
+
 } else if (parseInt(kittyScore) >= 1 & parseInt(kittyScore) <= 3 ) {
   printScore.textContent = 'You got ' + kittyScore + ' kitties. You are a dog person';
 } else if (parseInt(kittyScore) >= 3 & parseInt(kittyScore) <= 5) {
