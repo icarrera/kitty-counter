@@ -1,20 +1,15 @@
 'use strict';
 //array of cat images
-var randomCatSpotX, randomCatSpotY;
 var imageArray = [];
-var imageNameArray = ['kittyimg1.png', 'kittyimg2.jpg', 'kittyimg3.png',
+var imageNameArray = ['kittyimg1.png', 'kittyimg2.png', 'kittyimg3.png',
                       'kittyimg4.png', 'kittyimg5.png', 'kittyimg6.png',
                       'kittyimg7.png'];
 //function that randomizes a number between 0-300
-function randomCatNapSpot() {
-      var topOfRange = 300;
-      return Math.floor(Math.random() * topOfRange);
+function randomMeow(range) {
+      // var topOfRange = 300;
+      return Math.floor(Math.random() * range);
   }
-//create random x and y cordinates for printing on canvas
-function findSpotXY () {
-  randomCatSpotX = randomCatNapSpot();
-  randomCatSpotY = randomCatNapSpot();
-  }
+
 //function that loads the images into the new array
 function loadImages () {
   for(var i = 0; i < imageNameArray.length; i += 1) {
@@ -26,18 +21,20 @@ function loadImages () {
 //function that randomizes a cat image from the array
 function randomCatImage() {
   var arrLength = imageArray.length;
-  return imageArray[Math.floor(Math.random() * arrLength)];
+  return imageArray[randomMeow(arrLength)];
   }
 //getting the canvas element globally
 var canvasPort = document.getElementById('viewport');
+var picSize = 200;
+var xMax = canvasPort.width - (picSize / 2);
+var yMax = canvasPort.height - (picSize / 2);
 var ctx = canvasPort.getContext('2d');
 //function that needs to be call within our correctness checker
 function loadKitteh() {
-  findSpotXY ();
   loadImages();
   var iHazKittehImage = randomCatImage();
   iHazKittehImage.onload = function () {
-    ctx.drawImage(iHazKittehImage, randomCatSpotX, randomCatSpotY, 200, 200);
+    ctx.drawImage(iHazKittehImage, randomMeow(xMax), randomMeow(yMax), picSize, picSize);
   }
 }
 
@@ -59,8 +56,8 @@ var gameInput = document.getElementById('gameInput');
 var printQuestion = document.getElementById('printQuestion');
 //function that gives randomNumber1 and randomNumber2 random content between 0-11
 function getRandomNumber () {
-    randomNumber1 = Math.floor(Math.random() * (10 - 1 + 1)) + 1;
-    randomNumber2 = Math.floor(Math.random() * (10 - 1 + 1)) + 1;
+    randomNumber1 = randomMeow(10) + 1;
+    randomNumber2 = randomMeow(10) + 1;
     console.log('randomNumber1 is ' + randomNumber1 + '  randomNumber2 is ' + randomNumber2);
     printQuestion.textContent = randomNumber1 + ' + ' + randomNumber2 + ' =';
 }
@@ -83,16 +80,13 @@ function questionRandomizer(event) {
 //sound if answer correct
     var audio = new Audio('audio/kitten.mp3');
     audio.play();
-    event.target.answer.value = null;
-    localStorage.setItem('scorePersist',JSON.stringify(kittyCounter));
-    getRandomNumber();
   }
     else {
-        console.log('not the right answer')
-        event.target.answer.value = null;
-        localStorage.setItem('scorePersist',JSON.stringify(kittyCounter));
-        getRandomNumber();
+      console.log('not the right answer')
   }
+  event.target.answer.value = null;
+  localStorage.setItem('scorePersist',JSON.stringify(kittyCounter));
+  getRandomNumber();
 }
 //event listener for the answer form
 element.addEventListener('submit', questionRandomizer);
