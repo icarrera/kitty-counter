@@ -1,4 +1,48 @@
 'use strict';
+//array of cat images
+var randomCatSpotX, randomCatSpotY;
+var imageArray = [];
+var imageNameArray = ['kittyimg1.png', 'kittyimg2.jpg', 'kittyimg3.png',
+                      'kittyimg4.png', 'kittyimg5.png', 'kittyimg6.png',
+                      'kittyimg7.png'];
+//function that randomizes a number between 0-300
+function randomCatNapSpot() {
+      var topOfRange = 300;
+      return Math.floor(Math.random() * topOfRange);
+  }
+//create random x and y cordinates for printing on canvas
+function findSpotXY () {
+  randomCatSpotX = randomCatNapSpot();
+  randomCatSpotY = randomCatNapSpot();
+  }
+//function that loads the images into the new array
+function loadImages () {
+  for(var i = 0; i < imageNameArray.length; i += 1) {
+      imageArray[i] = new Image();
+      imageArray[i].src = 'img/' + imageNameArray[i];
+      imageArray[i].alt = 'Kitty #' + (i + 1);
+      }
+    }
+//function that randomizes a cat image from the array
+function randomCatImage() {
+  var arrLength = imageArray.length;
+  return imageArray[Math.floor(Math.random() * arrLength)];
+  }
+//getting the canvas element globally
+var canvasPort = document.getElementById('viewport');
+var ctx = canvasPort.getContext('2d');
+//function that needs to be call within our correctness checker
+function loadKitteh() {
+  findSpotXY ();
+  loadImages();
+  var iHazKittehImage = randomCatImage();
+  iHazKittehImage.onload = function () {
+    ctx.drawImage(iHazKittehImage, randomCatSpotX, randomCatSpotY, 200, 200);
+  }
+}
+
+
+
 var userScore = localStorage.getItem('scorePersist');
 if (userScore) {
   kittyCounter = JSON.parse(userScore);
@@ -35,6 +79,7 @@ function questionRandomizer(event) {
   if (answer === (randomNumber1 + randomNumber2)) {
     console.log('Great job!');
     kittyCounter += 1;
+    loadKitteh();
     event.target.answer.value = null;
     localStorage.setItem('scorePersist',JSON.stringify(kittyCounter));
     getRandomNumber();
