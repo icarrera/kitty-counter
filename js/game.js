@@ -1,7 +1,7 @@
 'use strict';
 //array of cat images
 var imageArray = [];
-var imageNameArray = ['kittyimg1.png', 'kittyimg2.jpg', 'kittyimg3.png',
+var imageNameArray = ['kittyimg1.png', 'kittyimg2.png', 'kittyimg3.png',
                       'kittyimg4.png', 'kittyimg5.png', 'kittyimg6.png',
                       'kittyimg7.png'];
 //function that randomizes a number between 0-300
