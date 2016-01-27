@@ -5,6 +5,7 @@
   color: red;
   margin:1%;
   padding:0%;
+  margin-top: -100px;
 }
 
 #gameClock {
@@ -13,4 +14,5 @@
   color: Green;
   margin:1%;
   padding:0%;
+  margin-top: -100px;
 }
