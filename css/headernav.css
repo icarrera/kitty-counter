@@ -31,7 +31,7 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    padding: 10px;
+    padding: 5px;
     margin-top: 0px;
     margin-bottom: 0px;
     width: 100%;
@@ -47,8 +47,7 @@ header {
 .kittyTitle img {
   width: 250px;
   height: 250px;
-  background-color: transparent;
-  }
+}
 
 .kittyTitle img:hover {
     -ms-transform: scale(1.5,1.5); /* IE 9 */
