@@ -2,7 +2,7 @@
    font-family: Helvetica, Verdana, sans-serif;
    color: #300032;
 }
-/*css for about us animation*/
+/*css for about us animation from https://davidwalsh.name/css-flip*/
 .flip-container {
   perspective: 1000;
 }
@@ -12,8 +12,8 @@
 }
 
 .flip-container, .front, .back {
-  width: 185px;
-  height: 357px;
+  width: 250px;
+  height: 375px;
 }
 
 .flipper {
@@ -25,22 +25,34 @@
 .front, .back {
   backface-visibility: hidden;
   position: absolute;
-  top: 0;
-  left: 0;
+  border: 1px solid black;
+  /*top: 0;
+  left: 0;*/
 }
 
 .front {
-  z-index: 2;
   transform: rotateY(0deg);
-}
+  background-color:#836585;
+  /*border-radius: 15px;*/
+  }
 
 .back {
   background-color:#300032;
-  padding: 5px;
   color: white;
+  width: 245px;
+  height: 370px;
+  padding: 5px;
   transform: rotateY(180deg);
+  /*border-radius: 15px;*/
 }
 
+.back b{
+  background-color:#300032;
+  padding: 5px;
+  color: white;
+  text-align: center;
+  border-radius: 15px;
+}
 /*flex container for about us pics*/
 .rowOneContainer {
   width: 100%;
@@ -58,4 +70,26 @@
   display: inline-flex;
   justify-content: space-around;
   margin-bottom: 20px;
+}
+/*
+.aboutUsName {
+  text-align: center;
+  background-color:#300032;
+}*/
+
+.aboutUsCat {
+  width: 250px;
+  height:375px;
+}
+
+.aboutUsFace {
+  width: 250px;
+  height: 250px;
+}
+
+.bio {
+  font-style: oblique;
+  background-color: #300032;
+  color: white;
+  font-size: 14px;
 }
