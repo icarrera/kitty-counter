@@ -8,6 +8,7 @@ var imageNameArray = ['kittyimg1.png', 'kittyimg2.png', 'kittyimg3.png',
 function randomMeow(range) {
       // var topOfRange = 300;
       return Math.floor(Math.random() * range);
+
   }
 
 //function that loads the images into the new array
@@ -25,9 +26,12 @@ function randomCatImage() {
   }
 //getting the canvas element globally
 var canvasPort = document.getElementById('viewport');
-var picSize = 200;
-var xMax = canvasPort.width - (picSize / 2);
-var yMax = canvasPort.height - (picSize / 2);
+canvasPort.width = window.screen.width;
+canvasPort.height = window.screen.height * 0.5;
+
+var picSize = canvasPort.width/5;
+var xMax = canvasPort.width - (picSize);
+var yMax = canvasPort.height - (picSize);
 var ctx = canvasPort.getContext('2d');
 //function that needs to be call within our correctness checker
 function loadKitteh() {
@@ -35,6 +39,8 @@ function loadKitteh() {
   var iHazKittehImage = randomCatImage();
   iHazKittehImage.onload = function () {
     ctx.drawImage(iHazKittehImage, randomMeow(xMax), randomMeow(yMax), picSize, picSize);
+    // ctx.drawImage(iHazKittehImage, randomMeow(xMax), randomMeow(yMax));
+
   }
 }
 

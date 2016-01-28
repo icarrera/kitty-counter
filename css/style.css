@@ -42,10 +42,13 @@ section.howToPlay {
   flex-direction: column;
   align-content: center;
   align-items: center;
+  position: relative;
+  z-index: 5;
+
 }
 
 section#gameInput {
-  background-color:#CAA2DD;
+  background-color: transparent;
   padding: 1%;
   display: flex;
   justify-content: center;
@@ -53,8 +56,9 @@ section#gameInput {
   align-items: center;
   align-content: center;
   border-radius: 15px;
-  box-shadow: 0px 0px 10px black;
+  position: relative;
 }
+
 p#printQuestion {
   font-size: 400%;
   font-weight: bolder;
@@ -64,6 +68,7 @@ p#printQuestion {
   border-radius: 15px;
   border: 1px solid black;
   box-shadow: 0px 0px 10px black;
+  opacity: 1;
 }
 p#instructions {
 background-color:#CAA2DD;
@@ -90,9 +95,18 @@ background-color:#CAA2DD;
   border: 1px solid black;
   /*text-shadow: 1px 1px white;*/
 }
+
+.startButton {
+  position: relative;
+  z-index: 10;
+}
+
 #submitAnswer {
   background-color: #5EC4B7;
   padding: 2%;
+  border-radius: 15px;
+  box-shadow: 0px 0px 10px black;
+  border: 1px solid black;
 }
 
 #submitAnswer label{
@@ -101,10 +115,16 @@ background-color:#CAA2DD;
 
 #scoreLink {
   display: flex;
-  font-size: 24px;
+  font-size: 30px;
+  font-weight: bolder;
+  color: yellow;
+  text-shadow: 1px 1px black;
   width:100%;
+  background-color: transparent;
   justify-content: center;;
   text-decoration: none;
+  position: relative;
+  z-index: 5;
 }
 
 #scorebox {
@@ -116,3 +136,15 @@ background-color:#CAA2DD;
   width: 100%;
   text-align: center;
 }
+
+canvas {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+
+  }
+
+/*img {
+  width: 100%;
+  height: 100%;
+}*/
