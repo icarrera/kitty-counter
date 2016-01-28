@@ -25,6 +25,7 @@
 .front, .back {
   backface-visibility: hidden;
   position: absolute;
+  border: 1px solid black;
   /*top: 0;
   left: 0;*/
 }
@@ -77,5 +78,9 @@
 .aboutUsCat {
   width: 250px;
   height:375px;
+}
 
+.aboutUsFace {
+  width: 250px;
+  height: 250px;
 }
