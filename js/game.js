@@ -197,13 +197,3 @@ startGame.addEventListener('click', hideInstructions);
 
 var audio = document.getElementById("meowsound");
 audio.play();
-var audio = $("#meowsound")[0];
-$("header img").mouseenter(function() {
-  audio.play();
-});
-var audio = document.getElementById("meowsound2");
-audio.play();
-var audio = $("#meowsound2")[0];
-$("header img").mouseenter(function() {
-  audio.play();
-});
