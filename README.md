@@ -1,20 +1,54 @@
 # Kitty-Counter
-A timed, math-based game where every correct answer causes a kitty to appear on screen!
+Code Fellows Seattle Code 201: Foundations of Software Development
 
-GAME<br>
-- User answers randomly generated addition math problems.<br>
-- For every correct answer a cat meow is played and a kitty appears on screen.<br>
-- User can click through to new screen to see their score and the number of kitties they have earned.<br>
-- Game includes about us pages showing game creators.<br>
+Final Project
 
-GAME CREATION<br>
-- Use event listeners and handlers tied to 'start game' button to start countdown timer and game clock.<br>
-- Use math random (with numbers 1-10) to create simple addition problems.<br>
-- Use form and focus to create user entry field.<br>
-- Utilize local storage to track number of correct answers.<br>
-- Use math random and canvas to make a random kitty image appear on screen for every correct answer.<br>
-- Use jquery to make meow sound with every correct answer.<br>
+January 2016
+---
+Kitty Counter<br>
+Kitty Counter is a timed, math-based game where every correct answer causes a kitty to appear on screen. The user has 20 seconds to answer as many addition problems as possible. When time runs out, the math problem and submission form disappears and a link to the total kitty count (final score) page appears. When user clicks on the "Click Here for Total Kitty Count" link, they can view their total kitty count along with a silly message associated with their score range. On the total kitty count page, the user is then given the option to go back to the game page and and try again.
 
-ABOUT US<br>
-- Page to show game creators and the cats in their lives<br>
-- Use html and css to create image flips<br>
+---
+Folders, Files, and Libraries<br>
+audio
+* kitten.mp3 - Cat meow audio that plays when index.html loads and user gets a math problem correct. <br>
+
+css
+* aboutus.css - CSS file related to the aboutus.html page
+* addthis.css, LMS_CAT.eot, LMS_CAT.svg, LMS_CAT.tff, LMS_CAT.woff - Files needed to style the Kitty Counter header font
+* style.css - CSS file that styles the index.html page
+* timer.css - CSS file that styles the countdown timers on on the index.html page
+
+img
+* contains the images used when user gets a correct answer on index.html, the header images, and the images on score.html
+
+js
+* about.js - JavaScript file for the "Contact Us" form on aboutus.html
+* game.js - JavaScript file that controls the game counters, math problems and forms, kitty sounds, and kitty image appearance
+* jquery-1.12.0.min.js - jQuery library to enable kitty sounds
+* score.js - JavaScript file that causes user's Kitty Count score to appear on score.html
+
+Files not in Folders:<br>
+* index.html - Home page where user plays the Kitty Count game.<br>
+* score.html - Page displays user's final Kitty Count and has fun kitty links.<br>
+* aboutus.html - Page displays information about the project creators and their kitty friends. <br>
+* README.md - Document with information about using Kitty Counter and the files in use.<br>
+* USERSTORIES.md - The user stories we created in order to create Kitty Counter<br>
+* gitpractices.md - Git best practices document for our group to reference. <br>
+
+---
+Read AUTHORS<br>
+
+Aimee Soucy https://github.com/alsoucy
+
+Katherine Beame https://github.com/kbeame
+
+Lex Myers https://github.com/lexm
+
+Iris Carrera https://github.com/icarrera
+
+---
+Contact Information <br>
+
+Contact contributors via their personal GitHub accounts or shoot an email to:
+kittycounter201d5@gmail.com
