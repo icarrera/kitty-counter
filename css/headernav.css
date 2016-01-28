@@ -26,9 +26,19 @@ header {
     justify-content: center;
   }
 
+  .kittyTitle {
+    border-style: solid;
+    border-color: #300032;
+    border-width: 1px;
+    border-radius: 30px;
+    background-color: #50BFBD;
+    box-shadow: 0 10px 6px -6px black;
+  }
+
 .kittyTitle img {
   width: 250px;
   height: 250px;
+  background-color: transparent;
   }
 
 .kittyTitle img:hover {
@@ -43,6 +53,7 @@ header {
   color: black;
   font: 25px/1 Helvetica, Verdana, sans-serif;
   text-transform: uppercase;
+  background-color: transparent;
 /*
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
