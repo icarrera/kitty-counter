@@ -93,3 +93,9 @@
   font-size: 14px;
   padding: 4px;
 }
+
+
+fieldset.emailBackground {
+  background-color: blue;
+  color: red;
+}
