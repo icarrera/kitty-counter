@@ -2,12 +2,12 @@
 *{
   font-family: Helvetica, Verdana, sans-serif;
   color: #300032;
+}
+
+body {
   background-color: #E0EFF1;
 }
 
-nav {
-  margin: 50px;
-}
 
 ul {
   overflow: auto;
@@ -19,20 +19,29 @@ header {
     justify-content: space-around;
     align-content: center;
     align-items: center;
-  }
-  .navstyle {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-  }
-
-  .kittyTitle {
     border-style: solid;
     border-color: #300032;
     border-width: 1px;
     border-radius: 30px;
     background-color: #50BFBD;
     box-shadow: 0 10px 6px -6px black;
+    margin-bottom: 5%;
+}
+  .navstyle {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 10px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    width: 100%;
+    background-color: transparent;
+  }
+
+  .kittyTitle {
+    background-color: transparent;
+    margin-top: 0px;
+    margin-bottom: 0px;
   }
 
 .kittyTitle img {
@@ -63,7 +72,6 @@ header {
 }
 
 li {
-  height: 25px;
   float: left;
   margin-right: 5px;
   /*border-right: 1px solid #aaa;*/
