@@ -1,3 +1,5 @@
+/* LMS Cat Treats font designed by London Stokes (http://londonsletters.com) */
+
 @font-face {
   font-family:"LMS Cat Treats";
   src:url("LMS_CAT.eot?") format("eot"),
@@ -24,17 +26,12 @@
 
 h1.shadows {
   font-size: 500%;
-  /*font-family: 'Amatic SC', cursive;*/
   font-family: "LMS Cat Treats", cursive;
   color: #300032;
   padding: 1%;
   margin: 1%;
   text-align: center;
 }
-
-/*p {
-  font-family: 'Montserrat', sans-serif;
-}*/
 
 section.howToPlay {
   display: flex;
@@ -44,7 +41,6 @@ section.howToPlay {
   align-items: center;
   position: relative;
   z-index: 5;
-
 }
 
 section#gameInput {
@@ -93,7 +89,6 @@ background-color:#CAA2DD;
   border-radius: 15px;
   margin: 1%;
   border: 1px solid black;
-  /*text-shadow: 1px 1px white;*/
 }
 
 .startButton {
@@ -146,10 +141,4 @@ canvas {
   width: 100%;
   height: 100%;
   position: absolute;
-
   }
-
-/*img {
-  width: 100%;
-  height: 100%;
-}*/
