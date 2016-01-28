@@ -39,19 +39,17 @@
 .back {
   background-color:#300032;
   color: white;
-  width: 245px;
-  height: 370px;
-  padding: 5px;
+  width: 250px;
+  height: 375px;
+  /*padding: 5px;*/
   transform: rotateY(180deg);
   /*border-radius: 15px;*/
 }
 
 .back b{
   background-color:#300032;
-  padding: 5px;
   color: white;
   text-align: center;
-  border-radius: 15px;
 }
 /*flex container for about us pics*/
 .rowOneContainer {
@@ -71,11 +69,12 @@
   justify-content: space-around;
   margin-bottom: 20px;
 }
-/*
+
 .aboutUsName {
   text-align: center;
   background-color:#300032;
-}*/
+  margin-left: 5px;
+}
 
 .aboutUsCat {
   width: 250px;
@@ -92,4 +91,5 @@
   background-color: #300032;
   color: white;
   font-size: 14px;
+  padding: 4px;
 }
