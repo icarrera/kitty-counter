@@ -176,3 +176,32 @@ var audio = $("#meowsound2")[0];
 $("header img").mouseenter(function() {
   audio.play();
 });
+
+
+
+// practice
+// json_practice
+//
+//
+// 1.) Create an array that the kitty counter is pushed up to
+//
+// var totalAttemptsScores = [];
+//
+// 2.) stringily the array and setItem in JSON
+//
+// localStorage.setItem('totalScores', JSON.stringify(totalAttemptsScores));
+//
+// 3.)
+//
+// function clearLSArray() {
+// if (localStorage.totalScores) {
+//  totalAttemptsScores = [];
+//   totalAttemptsScores = JSON.parse(localStorage.totalScores);
+// } else {
+//   console.log('Local storage empty!! Initializing!');
+//   localStorage.setItem('totalScores', JSON.stringify(totalAttemptsScores));
+// }
+// };
+//
+// clearLsArray();
+//
