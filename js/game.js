@@ -1,45 +1,6 @@
 'use strict';
-//array of cat images
 var imageArray = [];
-var imageNameArray = ['kittyimg1.png', 'kittyimg2.png', 'kittyimg3.png',
-                      'kittyimg4.png', 'kittyimg5.png', 'kittyimg6.png',
-                      'kittyimg7.png'];
-//function that randomizes a number between 0-300
-function randomMeow(range) {
-      // var topOfRange = 300;
-      return Math.floor(Math.random() * range);
-  }
-
-//function that loads the images into the new array
-function loadImages () {
-  for(var i = 0; i < imageNameArray.length; i += 1) {
-      imageArray[i] = new Image();
-      imageArray[i].src = 'img/' + imageNameArray[i];
-      imageArray[i].alt = 'Kitty #' + (i + 1);
-      }
-    }
-//function that randomizes a cat image from the array
-function randomCatImage() {
-  var arrLength = imageArray.length;
-  return imageArray[randomMeow(arrLength)];
-  }
-//getting the canvas element globally
-var canvasPort = document.getElementById('viewport');
-var picSize = 200;
-var xMax = canvasPort.width - (picSize / 2);
-var yMax = canvasPort.height - (picSize / 2);
-var ctx = canvasPort.getContext('2d');
-//function that needs to be call within our correctness checker
-function loadKitteh() {
-  loadImages();
-  var iHazKittehImage = randomCatImage();
-  iHazKittehImage.onload = function () {
-    ctx.drawImage(iHazKittehImage, randomMeow(xMax), randomMeow(yMax), picSize, picSize);
-  }
-}
-
-
-
+var imageNameArray = ['img/kittyimg1.png', 'img/kittyimg2.jpg', 'img/kittyimg3.png'];
 var userScore = localStorage.getItem('scorePersist');
 if (userScore) {
   kittyCounter = JSON.parse(userScore);
@@ -56,13 +17,23 @@ var gameInput = document.getElementById('gameInput');
 var printQuestion = document.getElementById('printQuestion');
 //function that gives randomNumber1 and randomNumber2 random content between 0-11
 function getRandomNumber () {
-    randomNumber1 = randomMeow(10) + 1;
-    randomNumber2 = randomMeow(10) + 1;
+    randomNumber1 = Math.floor(Math.random() * (10 - 1 + 1)) + 1;
+    randomNumber2 = Math.floor(Math.random() * (10 - 1 + 1)) + 1;
+    catRandom = Math.floor(Math.random() * (imageNameArray.length - 0 )) + 0;
+    console.log("catRadom" + catRandom);
     console.log('randomNumber1 is ' + randomNumber1 + '  randomNumber2 is ' + randomNumber2);
     printQuestion.textContent = randomNumber1 + ' + ' + randomNumber2 + ' =';
 }
 getRandomNumber();
 
+
+
+// var kittyimg1 = new Image(100, 100);
+// kittyimg1.src = 'img/kittyimg1.png';
+// kittyimg1.alt = 'alt';
+// var kittyimg2 = new Image(100, 100);
+// kittyimg2.src = 'img/kittyimg2.jpg';
+// kittyimg2.alt = 'alt';
 
 var element = document.getElementById('submitAnswer');
 
@@ -73,21 +44,27 @@ function questionRandomizer(event) {
   //store the new inputs as new objects for ease of use
   var answer = parseFloat(event.target.answer.value);
 //if/else statement, judges whether the input is correct
-  if (answer === (randomNumber1 + randomNumber2)) {
+if (answer === (randomNumber1 + randomNumber2)) {
     console.log('Great job!');
     kittyCounter += 1;
-    loadKitteh();
-//sound if answer correct
-    var audio = new Audio('audio/kitten.mp3');
-    audio.play();
-  }
+    var kittyImageHook = document.getElementById('kittyMeow');
+        var kittyImageElement = document.createElement('img');
+    kittyImageElement.setAttribute("src", imageNameArray[catRandom]);
+      kittyImageElement.setAttribute("class", "correctAnswer");
+    //append element to kittyMeow
+    console.log("kitty appeared");
+    kittyImageHook.appendChild(kittyImageElement);
+    event.target.answer.value = null;
+    localStorage.setItem('scorePersist',JSON.stringify(kittyCounter));
+    getRandomNumber();
+   }
     else {
-      console.log('not the right answer')
+        console.log('not the right answer')
+        event.target.answer.value = null;
+        localStorage.setItem('scorePersist',JSON.stringify(kittyCounter));
+        getRandomNumber();
+      }
   }
-  event.target.answer.value = null;
-  localStorage.setItem('scorePersist',JSON.stringify(kittyCounter));
-  getRandomNumber();
-}
 //event listener for the answer form
 element.addEventListener('submit', questionRandomizer);
 //hides input and question display for the games until game starts
@@ -163,16 +140,3 @@ var button = document.getElementById('startGame');
 startGame.addEventListener('click', handleCountdown);
 startGame.addEventListener('click', handleGameClock);
 startGame.addEventListener('click', hideInstructions);
-
-var audio = document.getElementById("meowsound");
-audio.play();
-var audio = $("#meowsound")[0];
-$("header img").mouseenter(function() {
-  audio.play();
-});
-var audio = document.getElementById("meowsound2");
-audio.play();
-var audio = $("#meowsound2")[0];
-$("header img").mouseenter(function() {
-  audio.play();
-});
