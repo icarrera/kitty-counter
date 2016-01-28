@@ -132,6 +132,11 @@ background-color:#CAA2DD;
   text-align: center;
 }
 
+#finalScoreImg > img {
+  width: 100%;
+  max-width: 500px;
+}
+
 #kitty-links p{
   width: 100%;
   text-align: center;
