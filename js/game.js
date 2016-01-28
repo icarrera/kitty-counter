@@ -44,14 +44,30 @@ function loadKitteh() {
   }
 }
 
+var totalAttemptsScores = [];
 
 
+unction clearLSArray() {
+if (localStorage.totalScores) {
+ totalAttemptsScores = [];
+  totalAttemptsScores = JSON.parse(localStorage.totalScores);
+} else {
+  console.log('Local storage empty!! Initializing!');
+  localStorage.setItem('totalScores', JSON.stringify(totalAttemptsScores));
+}
+};
+
+var kittyCounter = 0;
 var userScore = localStorage.getItem('scorePersist');
+function failSafe () {
 if (userScore) {
-  kittyCounter = JSON.parse(userScore);
+  kittyCounter = 0;
 } else {
   localStorage.setItem('scorePersist',JSON.stringify(kittyCounter));
 }
+}
+failSafe ();
+clearLSArray();
 // the code below will display the user's score, but needs the local storage component in place to be functional.
 
 var kittyCounter = 0;
