@@ -47,13 +47,13 @@ function loadKitteh() {
 var totalAttemptsScores = [];
 
 
-unction clearLSArray() {
-if (localStorage.totalScores) {
+function clearLSArray() {
+if (localStorage.scoresOfGamesPast) {
  totalAttemptsScores = [];
-  totalAttemptsScores = JSON.parse(localStorage.totalScores);
+  totalAttemptsScores = JSON.parse(localStorage.scoresOfGamesPast);
 } else {
   console.log('Local storage empty!! Initializing!');
-  localStorage.setItem('totalScores', JSON.stringify(totalAttemptsScores));
+  localStorage.setItem('scoresOfGamesPast', JSON.stringify(totalAttemptsScores));
 }
 };
 
@@ -66,6 +66,12 @@ if (userScore) {
   localStorage.setItem('scorePersist',JSON.stringify(kittyCounter));
 }
 }
+
+var CreatePreviousScoreObject = function (scoreDate, additionCount) {
+  this.scoreDate = scoreDate;
+  this.additionCount = additionCount;
+}
+
 failSafe ();
 clearLSArray();
 // the code below will display the user's score, but needs the local storage component in place to be functional.
@@ -164,6 +170,9 @@ var handleGameClock = function() {
       if (gameCounter === 0) {
         gameClock.innerHTML = 'Time\'s Up!';
         gameInput.style.visibility = 'hidden';
+        var d = new Date();
+        totalAttemptsScores.push(new CreatePreviousScoreObject(d,kittyCounter));
+        localStorage.setItem('scoresOfGamesPast', JSON.stringify(totalAttemptsScores));
         clearInterval(gameCounter);
       };
       if (gameCounter === -1) {
