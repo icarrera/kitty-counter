@@ -1,6 +1,26 @@
+
+var allParticipantScores = []
 var printScore = document.getElementById('your-score');
 var kittyScore = localStorage.getItem('scorePersist')
+
+allParticipantScores = JSON.parse(localStorage.totalScores); //is totalAttemptsScores a global variable?
 // printScore.textContent = 'You got ' + kittyScore + ' kitties!';
+
+function clearScoreArray() {
+if (localStorage.totalScores) {
+ allParticipantScores = [];
+ allParticipantScores = JSON.parse(localStorage.totalScores);
+} else {
+  console.log('Local storage empty!! Initializing!');
+  // localStorage.setItem('', JSON.stringify(allParticipantScores));
+}
+};
+
+clearScoreArray();
+
+
+
+
 
 var attributeImages = ['img/cucumber.gif','img/dog.jpg','img/litterbox.jpg','img/bath-cat.jpg','img/cat_on_walk.jpg','img/sweater_cat.jpg','img/catnip.jpg','img/magic_cat.gif'];
 

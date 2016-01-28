@@ -39,6 +39,23 @@ function loadKitteh() {
 }
 
 
+var totalAttemptsScores = [];
+var kittyCounter = 0;
+
+//many scores local storage attempt
+
+
+function clearLSArray() {
+if (localStorage.totalScores) {
+ totalAttemptsScores = [];
+  totalAttemptsScores = JSON.parse(localStorage.totalScores);
+} else {
+  console.log('Local storage empty!! Initializing!');
+  localStorage.setItem('totalScores', JSON.stringify(totalAttemptsScores));
+}
+};
+
+clearLSArray();
 
 var userScore = localStorage.getItem('scorePersist');
 if (userScore) {
@@ -46,9 +63,9 @@ if (userScore) {
 } else {
   localStorage.setItem('scorePersist',JSON.stringify(kittyCounter));
 }
-// the code below will display the user's score, but needs the local storage component in place to be functional.
 
-var kittyCounter = 0;
+
+// the code below will display the user's score, but needs the local storage component in place to be functional.
 var randomNumber1, randomNumber2;
 document.getElementById("answer").focus();
 var gameInput = document.getElementById('gameInput');
@@ -80,6 +97,7 @@ function questionRandomizer(event) {
 //sound if answer correct
     var audio = new Audio('audio/kitten.mp3');
     audio.play();
+    //if answer is correct then store the data
   }
     else {
       console.log('not the right answer')
@@ -142,6 +160,10 @@ var handleGameClock = function() {
       if (gameCounter === 0) {
         gameClock.innerHTML = 'Time\'s Up!';
         gameInput.style.visibility = 'hidden';
+
+        //push the kitty Counter number up to totalAttemptsScores then stringify that count.
+        totalAttemptsScores.push(kittyCounter);
+        localStorage.setItem('totalScores', JSON.stringify(totalAttemptsScores));
         clearInterval(gameCounter);
       };
       if (gameCounter === -1) {
