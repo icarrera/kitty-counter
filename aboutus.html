@@ -7,7 +7,7 @@
   <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
   <link type="text/css" rel="stylesheet" href="css/style.css">
   <link type="text/css" rel="stylesheet" href="css/headernav.css">
-    <link type="text/css" rel="stylesheet" href="css/aboutus.css">
+  <link type="text/css" rel="stylesheet" href="css/aboutus.css">
   <title>KITTY COUNTER</title>
 </head>
 <header class="container">
@@ -76,9 +76,11 @@
 </div>
 </section>
 </div>
+<section id="formArea">
     <form id="contactForm" class="contactUs">
-      <fieldset>
-      <legend>Contact Us</legend>
+      <div id="emailBackground">
+        <fieldset>
+        <legend>Contact Us</legend>
 
       <label>Name:<br />
       <input name="name" type="text" size="20"></label><br />
@@ -87,10 +89,11 @@
       <input name="email" type="email" size="30"></label><br />
 
       <label>Comments:<br />
-      <textarea name="comments" type="text" placeholder="Enter your comments here..."></textarea>
-      </fieldset>
+      <textarea name="comments" type="text" placeholder="Enter your comments here..."></textarea><br />
+    </fieldset><br />
       <button type="submit" id="contactSubmit">Submit</button>
     </form>
+  </section>
     <script src="js/about.js"></script>
   </body>
 </html>
