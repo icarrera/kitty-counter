@@ -115,10 +115,16 @@ background-color:#CAA2DD;
 
 #scoreLink {
   display: flex;
-  font-size: 24px;
+  font-size: 30px;
+  font-weight: bolder;
+  color: yellow;
+  text-shadow: 1px 1px black;
   width:100%;
+  background-color: transparent;
   justify-content: center;;
   text-decoration: none;
+  position: relative;
+  z-index: 5;
 }
 
 #scorebox {
