@@ -18,6 +18,20 @@ if (localStorage.totalScores) {
   console.log('Local storage empty!! Initializing!');
 }
 };
+clearScoreArray();
+
+var previousScores = document.getElementById('previousScores');
+
+function createList () {
+for (var i = ((allParticipantScores.length) - 1); i > 0; i--) {
+  var listScore = document.createElement('li');
+  var date = new Date(allParticipantScores[i].scoreDate);
+  listScore.textContent = date + ': your score was ' + allParticipantScores[i].additionCount;
+  previousScores.appendChild(listScore);
+}
+}
+
+createList ();
 
 
 if (parseInt(kittyScore) === 0) {
