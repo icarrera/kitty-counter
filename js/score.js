@@ -1,3 +1,5 @@
+
+var allParticipantScores = [];
 var printScore = document.getElementById('your-score');
 var kittyScore = localStorage.getItem('scorePersist')
 // printScore.textContent = 'You got ' + kittyScore + ' kitties!';
@@ -5,6 +7,18 @@ var kittyScore = localStorage.getItem('scorePersist')
 var attributeImages = ['img/cucumber.gif','img/dog.jpg','img/litterbox.jpg','img/bath-cat.jpg','img/cat_on_walk.jpg','img/sweater_cat.jpg','img/catnip.jpg','img/magic_cat.gif'];
 
 var imagePrint = document.getElementById('finalScoreImg');
+
+
+//make sure that the storage has content
+function clearScoreArray() {
+if (localStorage.totalScores) {
+ allParticipantScores = [];
+ allParticipantScores = JSON.parse(localStorage.totalScores);
+} else {
+  console.log('Local storage empty!! Initializing!');
+}
+};
+
 
 if (parseInt(kittyScore) === 0) {
   printScore.textContent = 'You got ' + kittyScore + ' kitties. You are a cucumber, you scare cats';
