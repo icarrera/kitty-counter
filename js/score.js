@@ -9,7 +9,7 @@ var imagePrint = document.getElementById('finalScoreImg');
 
 
 function clearScoreArray() {
-if (localStorage.totalScores) {
+if (localStorage.scoresOfGamesPast) {
  allParticipantScores = [];
  allParticipantScores = JSON.parse(localStorage.scoresOfGamesPast);
 } else {
@@ -22,15 +22,15 @@ clearScoreArray();
 var previousScores = document.getElementById('previousScores');
 
 function createList () {
-for (var i = ((allParticipantScores.length) - 1); i > 0; i--) {
+for (var i = 0; i < ((allParticipantScores.length) - 1 ); i++) {
   var listScore = document.createElement('li');
   var date = new Date(allParticipantScores[i].scoreDate);
   listScore.textContent = date + ': your score was ' + allParticipantScores[i].additionCount;
+  console.log('listScore');
   previousScores.appendChild(listScore);
 }
 }
 
-createList ();
 
 if (parseInt(kittyScore) === 0) {
   printScore.textContent = 'You got ' + kittyScore + ' kitties. You are a cucumber, you scare cats';
@@ -79,3 +79,6 @@ if (parseInt(kittyScore) === 0) {
   kittyImageElement.setAttribute('src', attributeImages[7]);
   imagePrint.appendChild(kittyImageElement);
 };
+
+
+createList ();
