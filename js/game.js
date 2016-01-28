@@ -189,11 +189,15 @@ var hideInstructions = function(){
   instruct.style.visibility = 'hidden'
 }
 
+var goToAnchor = function() {
+  window.location.replace = '#startAnchor';
+}
 
 var button = document.getElementById('startGame');
 startGame.addEventListener('click', handleCountdown);
 startGame.addEventListener('click', handleGameClock);
 startGame.addEventListener('click', hideInstructions);
+startGame.addEventListener('click', goToAnchor);
 
 var audio = document.getElementById("meowsound");
 audio.play();
