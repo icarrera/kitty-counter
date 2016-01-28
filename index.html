@@ -11,14 +11,11 @@
     <title>KITTY COUNTER</title>
   </head>
   <header>
+    <!--  whtiecat images Needs Flexbox Styling-->
     <section class="kittyTitle">
-    <img class="whitecat" src="img/kittyimg1.png" alt="" />
-    <p onmouseover="PlaySound('meowsound')" onmouseout="StopSound('meowsound')"></p>
-    <audio id="meowsound" src="audio/kitten.mp3"></audio>
+    <img class="whitecat" src="whitecat.png" alt="" />
     <h1 class="shadows">Kitty Counter!</h1>
-    <img class="catlogo1" src="img/catlogo1.png" alt="" />
-    <p onmouseover="PlaySound('meowsound')" onmouseout="StopSound('meowsound')"></p>
-    <audio id="meowsound2" src="audio/kitten.mp3"></audio>
+    <img class="whitecat2" src="whitecat.png" alt="" />
     </section>
     <hr>
     <nav>
@@ -41,20 +38,18 @@
     </div>
    </section>
     <p id="gameClock"></p>
-
+<!-- <canvas id="kittyAppear"></canvas> -->
 <!--  The Q and A form and printing -->
     <section id="gameInput">
     <p id="printQuestion">
-
     </p>
     <form id="submitAnswer">
     <label for="answer" type="text">Answer</label>
     <input id="answer" type="text" maxlength="15" autocomplete="off">
     </form>
    </section>
+   <div id="kittyMeow"></div>
    <a href ="score.html" id="scoreLink">A-meow-zing! Click Here for Total Kitty Count!</a>
-   <canvas id="viewport" width="400" height="400" style="border:1px solid #d3d3d3;"></canvas>
    <script type="text/javascript" src ="js/game.js"></script>
-   <script type="text/javascript" src="js/jquery-1.12.0.min.js"></script>
   </body>
 </html>
