@@ -38,8 +38,10 @@
 
 .back {
   background-color:#300032;
-  padding: 5px;
   color: white;
+  width: 245px;
+  height: 370px;
+  padding: 5px;
   transform: rotateY(180deg);
   /*border-radius: 15px;*/
 }
@@ -69,11 +71,11 @@
   justify-content: space-around;
   margin-bottom: 20px;
 }
-
+/*
 .aboutUsName {
   text-align: center;
   background-color:#300032;
-}
+}*/
 
 .aboutUsCat {
   width: 250px;
@@ -83,4 +85,11 @@
 .aboutUsFace {
   width: 250px;
   height: 250px;
+}
+
+.bio {
+  font-style: oblique;
+  background-color: #300032;
+  color: white;
+  font-size: 14px;
 }
