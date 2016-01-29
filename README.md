@@ -21,6 +21,14 @@ css
 
 img
 * contains the images used when user gets a correct answer on index.html, the header images, and the images on score.html
+* URL links for images used:
+  * http://giphy.com/gifs/cat-cucumber-10DqC960LpntYc
+  * http://cf.ltkcdn.net/cats/images/std/143304-425x320-Cat-rolling-in-catnip.jpg
+  * http://cdn.mysitemyway.com/etc-mysitemyway/icons/legacy-previews/icons/black-inlay-crystal-clear-bubble-icons-animals/010831-black-inlay-crystal-clear-bubble-icon-animals-animal-cat4.png
+  * http://www.doodlebugskittysitting.com/wp-content/uploads/2012/09/CaptureWiz002.jpg
+  * http://giphy.com/gifs/cat-cute-kitten-BgnKc6mLmE8tq
+  * http://www.drsfostersmith.com/images/categoryimages/highdef/9B-36442-FS54307H_798-cat.jpg
+  * http://holykaw.alltop.com/wp-content/uploads/2013/03/cat-bath.jpg
 
 js
 * about.js - JavaScript file for the "Contact Us" form on aboutus.html
