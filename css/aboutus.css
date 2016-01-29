@@ -93,3 +93,56 @@
   font-size: 14px;
   padding: 4px;
 }
+
+section#formArea {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+}
+div#emailBackground {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  background: url(https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTUFjrB6Bulm8V1TiyPgFr1AZXajwOJhQdW-YivTm_Dz1sCnY2P) #382E1C;
+  color: red;
+  width: 75%;
+  height: 300%;
+  border-radius: 15px;
+  padding: 1%;
+}
+
+label {
+  background: transparent;
+  color: white;
+  margin: 1%;
+}
+input {
+  padding: 1%;
+  margin: 1%;
+}
+legend {
+  background: white;
+  color: w;
+  border-radius: 30px;
+  color:#300032;
+  font-weight: 900;
+}
+button#contactSubmit {
+  background: white;
+  border-radius: 15px;
+  color:#300032;
+  font-weight: 900;
+  font-size: 100%;
+}
+
+#contactForm {
+  background: transparent;
+}
+
+fieldset {
+  background: transparent;
+  padding: 1%;
+}
