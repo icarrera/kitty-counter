@@ -1,6 +1,6 @@
 var allParticipantScores = [];
 var printScore = document.getElementById('your-score');
-var kittyScore = localStorage.getItem('scorePersist')
+var kittyScore = localStorage.getItem('scorePersist');
 // printScore.textContent = 'You got ' + kittyScore + ' kitties!';
 
 var attributeImages = ['img/cucumber.gif','img/dog.jpg','img/litterbox.jpg','img/bath-cat.jpg','img/cat_on_walk.jpg','img/sweater_cat.jpg','img/catnip.jpg','img/magic_cat.gif'];
@@ -9,26 +9,26 @@ var imagePrint = document.getElementById('finalScoreImg');
 
 
 function clearScoreArray() {
-if (localStorage.scoresOfGamesPast) {
- allParticipantScores = [];
- allParticipantScores = JSON.parse(localStorage.scoresOfGamesPast);
-} else {
-  console.log('Local storage empty!! Initializing!');
+  if (localStorage.scoresOfGamesPast) {
+    allParticipantScores = [];
+    allParticipantScores = JSON.parse(localStorage.scoresOfGamesPast);
+  } else {
+    console.log('Local storage empty!! Initializing!');
+  }
 }
-};
 
 clearScoreArray();
 
 var previousScores = document.getElementById('previousScores');
 
 function createList () {
-for (var i = 0; i < ((allParticipantScores.length) - 1 ); i++) {
-  var listScore = document.createElement('li');
-  var date = new Date(allParticipantScores[i].scoreDate);
-  listScore.textContent = date + ': your score was ' + allParticipantScores[i].additionCount;
-  console.log('listScore');
-  previousScores.appendChild(listScore);
-}
+  for (var i = 0; i < ((allParticipantScores.length) - 1 ); i++) {
+    var listScore = document.createElement('li');
+    var date = new Date(allParticipantScores[i].scoreDate);
+    listScore.textContent = date + ': your score was ' + allParticipantScores[i].additionCount;
+    console.log('listScore');
+    previousScores.appendChild(listScore);
+  }
 }
 
 
@@ -78,7 +78,7 @@ if (parseInt(kittyScore) === 0) {
   var kittyImageElement = document.createElement('img');
   kittyImageElement.setAttribute('src', attributeImages[7]);
   imagePrint.appendChild(kittyImageElement);
-};
+}
 
 
 createList ();
