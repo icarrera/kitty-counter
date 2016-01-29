@@ -62,6 +62,7 @@ var userScore = localStorage.getItem('scorePersist');
 function failSafe () {
 if (userScore) {
   kittyCounter = 0;
+  localStorage.setItem('scorePersist',JSON.stringify(kittyCounter));
 } else {
   localStorage.setItem('scorePersist',JSON.stringify(kittyCounter));
 }
