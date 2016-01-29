@@ -6,23 +6,22 @@ var imageNameArray = ['kittyimg1.png', 'kittyimg2.png', 'kittyimg3.png',
                       'kittyimg7.png'];
 //function that randomizes a number between 0-300
 function randomMeow(min, max) {
-      // var topOfRange = 300;
-      return Math.floor(Math.random() * (max - min + 1)) + min;
-  }
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
 
 //function that loads the images into the new array
 function loadImages () {
   for(var i = 0; i < imageNameArray.length; i += 1) {
-      imageArray[i] = new Image();
-      imageArray[i].src = 'img/' + imageNameArray[i];
-      imageArray[i].alt = 'Kitty #' + (i + 1);
-      }
-    }
+    imageArray[i] = new Image();
+    imageArray[i].src = 'img/' + imageNameArray[i];
+    imageArray[i].alt = 'Kitty #' + (i + 1);
+  }
+}
 //function that randomizes a cat image from the array
 function randomCatImage() {
   var arrLength = imageArray.length - 1;
   return imageArray[randomMeow(0, arrLength)];
-  }
+}
 //getting the canvas element globally
 var canvasPort = document.getElementById('viewport');
 canvasPort.width = window.screen.width;
@@ -38,37 +37,37 @@ function loadKitteh() {
   var iHazKittehImage = randomCatImage();
   iHazKittehImage.onload = function () {
     ctx.drawImage(iHazKittehImage, randomMeow(0, xMax), randomMeow(0, yMax), picSize, picSize);
-  }
+  };
 }
 
 var totalAttemptsScores = [];
 
 
 function clearLSArray() {
-if (localStorage.scoresOfGamesPast) {
+  if (localStorage.scoresOfGamesPast) {
  totalAttemptsScores = [];
   totalAttemptsScores = JSON.parse(localStorage.scoresOfGamesPast);
 } else {
   console.log('Local storage empty!! Initializing!');
   localStorage.setItem('scoresOfGamesPast', JSON.stringify(totalAttemptsScores));
 }
-};
+}
 
 var kittyCounter = 0;
 var userScore = localStorage.getItem('scorePersist');
 function failSafe () {
-if (userScore) {
-  kittyCounter = 0;
-  localStorage.setItem('scorePersist',JSON.stringify(kittyCounter));
-} else {
-  localStorage.setItem('scorePersist',JSON.stringify(kittyCounter));
-}
+  if (userScore) {
+    kittyCounter = 0;
+    localStorage.setItem('scorePersist',JSON.stringify(kittyCounter));
+  } else {
+    localStorage.setItem('scorePersist',JSON.stringify(kittyCounter));
+  }
 }
 
 var CreatePreviousScoreObject = function (scoreDate, additionCount) {
   this.scoreDate = scoreDate;
   this.additionCount = additionCount;
-}
+};
 
 failSafe ();
 clearLSArray();
@@ -76,7 +75,7 @@ clearLSArray();
 
 var kittyCounter = 0;
 var randomNumber1, randomNumber2;
-document.getElementById("answer").focus();
+document.getElementById('answer').focus();
 var gameInput = document.getElementById('gameInput');
 
 var printQuestion = document.getElementById('printQuestion');
