@@ -8,11 +8,6 @@ body {
   background-color: #E0EFF1;
 }
 
-
-ul {
-  overflow: auto;
-  list-style-type: none;
-  }
 header {
     display: flex;
     flex-direction: column;
@@ -36,6 +31,8 @@ header {
     margin-bottom: 0px;
     width: 100%;
     background-color: transparent;
+    overflow: auto;
+    list-style-type: none;
   }
 
   .kittyTitle {
@@ -70,18 +67,18 @@ header {
   transition: all 0.5s ease;*/
 }
 
-li {
+.navlist {
   float: left;
   margin-right: 5px;
   /*border-right: 1px solid #aaa;*/
   padding: 0 20px;
 }
 
-li:last-child {
+.navlist:last-child {
   border-right: none;
 }
 
-li a {
+.navlist a {
   text-decoration: none;
   color: #836585;
   font: 25px/1 Helvetica, Verdana, sans-serif;
@@ -94,11 +91,11 @@ li a {
   transition: all 0.5s ease;
 }
 
-li a:hover {
+.navlist a:hover {
   color: #580653;
 }
 
-li.active a {
+.navlist.active a {
   font-weight: bold;
   color: #300032;
 }
