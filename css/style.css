@@ -221,7 +221,7 @@ h2 {
 article {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   align-content: center;
   height: 80%;
@@ -231,11 +231,17 @@ article {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-start;;
   align-content: center;
   width: 100%;
 }
-h3.disclaimer {
+.disclaimer {
   margin: 0%;
   padding: 0%;
+}
+p.disclaimer {
+  margin: 1%;
+}
+article.linkArticle {
+  display: block;
 }
