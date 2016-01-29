@@ -125,27 +125,27 @@ var handleCountdown = function(){
     counter = 4;
     setInterval(function() {
       counter--;
+      var countdownSpan = document.getElementById('countdownCounter');
       if (counter > -1) {
-        startGame.style.visibility = 'hidden';
-        var span = document.getElementById('countdownCounter');
-        span.innerHTML = counter;
+        startButton.style.visibility = 'hidden';
+        countdownSpan.innerHTML = counter;
       }
       if (counter === 0) {
         gameInput.style.visibility = 'visible';
         document.getElementById('answer').focus();
-        span.innerHTML = 'GO!';
+        countdownSpan.innerHTML = 'GO!';
       }
       if (counter < 0) {
-        countdownCounter.style.visibility = 'hidden';
+        countdownSpan.style.visibility = 'hidden';
         clearInterval(counter);
       }
     }, 1000);
   })();
 };
 
+var scoreLink = document.getElementById('scoreLink');
 // function that reps the link to score.html
 var showScoreLink = function(){
-  var scoreLink = document.getElementById('scoreLink');
   scoreLink.style.visibility = 'hidden';
 };
 showScoreLink();

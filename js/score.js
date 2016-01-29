@@ -63,13 +63,13 @@ if (parseInt(kittyScore) === 0) {
   imagePrint.appendChild(kittyImageElement);
 
 } else if (parseInt(kittyScore) >= 11 & parseInt(kittyScore) <= 13) {
-  printScore.textContent = 'You got ' + kittyScore + ' kitties. You are a a cat wearing a holiday sweater';
+  printScore.textContent = 'You got ' + kittyScore + ' kitties. You are a cat wearing a holiday sweater';
   var kittyImageElement = document.createElement('img');
   kittyImageElement.setAttribute('src', attributeImages[5]);
   imagePrint.appendChild(kittyImageElement);
 
 } else if (parseInt(kittyScore) >= 14 & parseInt(kittyScore) <= 19) {
-  printScore.textContent = 'You got ' + kittyScore + ' kitties. You are a catnip';
+  printScore.textContent = 'You got ' + kittyScore + ' kitties. You are catnip!';
   var kittyImageElement = document.createElement('img');
   kittyImageElement.setAttribute('src', attributeImages[6]);
   imagePrint.appendChild(kittyImageElement);
