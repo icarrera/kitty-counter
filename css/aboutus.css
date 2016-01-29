@@ -41,9 +41,7 @@
   color: white;
   width: 250px;
   height: 375px;
-  /*padding: 5px;*/
   transform: rotateY(180deg);
-  /*border-radius: 15px;*/
 }
 
 .back b{
@@ -107,18 +105,18 @@ div#emailBackground {
   align-items: center;
   border: 1px solid black;
   background-image: url("../img/catback.jpg");
-  /*background-color: #C4C3D0;*/
-  color: red;
   width: 75%;
   height: 300%;
   border-radius: 15px;
   padding: 1%;
+  box-shadow: 0 10px 6px -6px black;
 }
 
-label {
+label b{
   background: transparent;
-  color: black;
+  color: white;
   margin: 1%;
+  text-shadow: 1px 1px 1px black;
 }
 input {
   padding: 1%;
