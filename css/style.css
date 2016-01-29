@@ -125,18 +125,20 @@ background-color:#CAA2DD;
 #scorebox {
   width: 100%;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-direction: column;
 }
 
 #finalScoreImg > img {
   width: 100%;
   max-width: 500px;
+  border-radius: 15px;
+  box-shadow: 0px 0px 8px black;
 }
 
-#kitty-links {
-  border: 2px solid #300032;
-  border-radius: 30px;
-  padding:2%;
-}
 
 #kitty-links p{
   width: 100%;
@@ -161,3 +163,43 @@ canvas {
   height: 100%;
   position: absolute;
   }
+
+  .currentScore {
+  background-color: #C4C3D0;
+  padding: 2%;
+  border-radius: 25px;
+  width:80%;
+  margin: 1%;
+  box-shadow: 0px 0px 10px black;
+  }
+
+  .logPreviousScores {
+    background-color: #C4C3D0;
+    padding: 1%;
+    border-radius: 25px;
+    width:80%;
+    margin: 1%;
+    box-shadow: 0px 0px 10px black;
+  }
+
+#try-again {
+  background-color: #FEE9EE;
+  border: 1px solid black;
+  box-shadow: 0px 0px 8px black;
+  border-radius: 25px;
+  padding: 1%;
+  margin: 2%;
+  color: #300032;
+}
+
+#kitty-links {
+  background-color: #C4C3D0;
+  padding: 1%;
+  border-radius: 25px;
+  width:80%;
+  margin: 1%;
+  box-shadow: 0px 0px 10px black;
+  padding: 1%;
+  margin: 2%;
+  color: #300032;
+}

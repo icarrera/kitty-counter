@@ -28,16 +28,19 @@
       <hr>
     </header>
     <section id="scorebox">
-      <p id="your-score"></p>
+      <article class="currentScore">
+      <h2> Current Kitty Count</h2>
+      <h3 id="your-score"></h3>
       <div id="finalScoreImg"></div>
-      <p>Click here to try again!</p>
+      <h4>Click here to try again!</h4>
       <!-- we might need this as a button to be an event listener later -->
       <a href="index.html"<button id="try-again">Try Again</button></a>
-      <section class="logPreviousScores">
+      </article>
+      <article class="logPreviousScores">
+        <h2>Score History</h2>
         <ul id="previousScores">
         </ul>
-      </section>
-    </section>
+      </article>
     <section id="kitty-links">
       <h2>Favorite Kitty Links</h2>
 
@@ -85,8 +88,9 @@
         <p><h4 class="adopt"><a href="http://www.paws.org/cats-and-dogs/shelter/cat-city/">PAWS Cat City</a></h4></p>
         <p><h4 class="adopt"><a href="http://purrfectpals.org/">Purrfect Pals</a><h4></p>
         <p><h4 class="adopt"><a href="http://www.seattleareafelinerescue.org/">Seattle Area Feline Rescue</a><h4></p>
-      </dl>    
+      </dl>
     </section>
+  </section>
     <script type="text/javascript" src ="js/score.js"></script>
     <script type="text/javascript" src="js/jquery-1.12.0.min.js"></script>
   </body>
