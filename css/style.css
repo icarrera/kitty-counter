@@ -132,8 +132,27 @@ background-color:#CAA2DD;
   max-width: 500px;
 }
 
+#kitty-links {
+  border: 2px solid #300032;
+  border-radius: 30px;
+  padding:2%;
+}
+
 #kitty-links p{
   width: 100%;
+  text-align: center;
+}
+
+#kitty-links h2{
+  text-align: center;
+}
+
+.links dd{
+  margin-left: 10%;
+  margin-right: 5%;
+}
+
+.adopt {
   text-align: center;
 }
 
