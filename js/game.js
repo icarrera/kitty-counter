@@ -5,10 +5,9 @@ var imageNameArray = ['kittyimg1.png', 'kittyimg2.png', 'kittyimg3.png',
                       'kittyimg4.png', 'kittyimg5.png', 'kittyimg6.png',
                       'kittyimg7.png'];
 //function that randomizes a number between 0-300
-function randomMeow(range) {
+function randomMeow(min, max) {
       // var topOfRange = 300;
-      return Math.floor(Math.random() * range);
-
+      return Math.floor(Math.random() * (max - min + 1)) + min;
   }
 
 //function that loads the images into the new array
@@ -21,8 +20,8 @@ function loadImages () {
     }
 //function that randomizes a cat image from the array
 function randomCatImage() {
-  var arrLength = imageArray.length;
-  return imageArray[randomMeow(arrLength)];
+  var arrLength = imageArray.length - 1;
+  return imageArray[randomMeow(0, arrLength)];
   }
 //getting the canvas element globally
 var canvasPort = document.getElementById('viewport');
@@ -38,9 +37,7 @@ function loadKitteh() {
   loadImages();
   var iHazKittehImage = randomCatImage();
   iHazKittehImage.onload = function () {
-    ctx.drawImage(iHazKittehImage, randomMeow(xMax), randomMeow(yMax), picSize, picSize);
-    // ctx.drawImage(iHazKittehImage, randomMeow(xMax), randomMeow(yMax));
-
+    ctx.drawImage(iHazKittehImage, randomMeow(0, xMax), randomMeow(0, yMax), picSize, picSize);
   }
 }
 
@@ -85,8 +82,8 @@ var gameInput = document.getElementById('gameInput');
 var printQuestion = document.getElementById('printQuestion');
 //function that gives randomNumber1 and randomNumber2 random content between 0-11
 function getRandomNumber () {
-    randomNumber1 = randomMeow(10) + 1;
-    randomNumber2 = randomMeow(10) + 1;
+    randomNumber1 = randomMeow(1, 10);
+    randomNumber2 = randomMeow(1, 10);
     console.log('randomNumber1 is ' + randomNumber1 + '  randomNumber2 is ' + randomNumber2);
     printQuestion.textContent = randomNumber1 + ' + ' + randomNumber2 + ' =';
 }
@@ -188,7 +185,7 @@ var handleGameClock = function() {
 var hideInstructions = function(){
   var instruct = document.getElementById('instructions');
   instruct.style.visibility = 'hidden'
-  window.location.replace = '#startAnchor';
+  window.location.href = '#startAnchor';
 }
 
 var button = document.getElementById('startGame');
