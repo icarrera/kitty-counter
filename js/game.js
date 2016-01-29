@@ -187,10 +187,10 @@ var hideInstructions = function(){
   window.location.href = '#startAnchor';
 };
 
-var button = document.getElementById('startGame');
-startGame.addEventListener('click', handleCountdown);
-startGame.addEventListener('click', handleGameClock);
-startGame.addEventListener('click', hideInstructions);
+var startButton = document.getElementById('startGame');
+startButton.addEventListener('click', handleCountdown);
+startButton.addEventListener('click', handleGameClock);
+startButton.addEventListener('click', hideInstructions);
 
 var audio = document.getElementById('meowsound');
 audio.play();
