@@ -45,12 +45,12 @@ var totalAttemptsScores = [];
 
 function clearLSArray() {
   if (localStorage.scoresOfGamesPast) {
- totalAttemptsScores = [];
-  totalAttemptsScores = JSON.parse(localStorage.scoresOfGamesPast);
-} else {
-  console.log('Local storage empty!! Initializing!');
-  localStorage.setItem('scoresOfGamesPast', JSON.stringify(totalAttemptsScores));
-}
+    totalAttemptsScores = [];
+    totalAttemptsScores = JSON.parse(localStorage.scoresOfGamesPast);
+  } else {
+    console.log('Local storage empty!! Initializing!');
+    localStorage.setItem('scoresOfGamesPast', JSON.stringify(totalAttemptsScores));
+  }
 }
 
 var kittyCounter = 0;
@@ -81,10 +81,10 @@ var gameInput = document.getElementById('gameInput');
 var printQuestion = document.getElementById('printQuestion');
 //function that gives randomNumber1 and randomNumber2 random content between 0-11
 function getRandomNumber () {
-    randomNumber1 = randomMeow(1, 10);
-    randomNumber2 = randomMeow(1, 10);
-    console.log('randomNumber1 is ' + randomNumber1 + '  randomNumber2 is ' + randomNumber2);
-    printQuestion.textContent = randomNumber1 + ' + ' + randomNumber2 + ' =';
+  randomNumber1 = randomMeow(1, 10);
+  randomNumber2 = randomMeow(1, 10);
+  console.log('randomNumber1 is ' + randomNumber1 + '  randomNumber2 is ' + randomNumber2);
+  printQuestion.textContent = randomNumber1 + ' + ' + randomNumber2 + ' =';
 }
 getRandomNumber();
 
@@ -93,8 +93,8 @@ var element = document.getElementById('submitAnswer');
 
 //event handler for the answer submission form
 function questionRandomizer(event) {
-	console.log(event); // so you can see what the comment is
-	event.preventDefault(); //stop the default behavior of the submit event
+  console.log(event); // so you can see what the comment is
+  event.preventDefault(); //stop the default behavior of the submit event
   //store the new inputs as new objects for ease of use
   var answer = parseFloat(event.target.answer.value);
 //if/else statement, judges whether the input is correct
@@ -107,7 +107,7 @@ function questionRandomizer(event) {
     audio.play();
   }
     else {
-      console.log('not the right answer')
+    console.log('not the right answer');
   }
   event.target.answer.value = null;
   localStorage.setItem('scorePersist',JSON.stringify(kittyCounter));
@@ -118,36 +118,36 @@ element.addEventListener('submit', questionRandomizer);
 //hides input and question display for the games until game starts
 gameInput.style.visibility = 'hidden';
 
-var counter = ''
+var counter = '';
 //countdown to game start
 var handleCountdown = function(){
-(function(){
+  (function(){
     counter = 4;
-  setInterval(function() {
-    counter--;
-    if (counter > -1) {
-      startGame.style.visibility = 'hidden';
-      var span = document.getElementById('countdownCounter');
-      span.innerHTML = counter;
-    }
-    if (counter === 0) {
-      gameInput.style.visibility = 'visible';
-      document.getElementById("answer").focus();
-      span.innerHTML = 'GO!';
-    }
-    if (counter < 0) {
-      countdownCounter.style.visibility = 'hidden';
-      clearInterval(counter);
-    }
-  }, 1000);
-})();
-}
+    setInterval(function() {
+      counter--;
+      if (counter > -1) {
+        startGame.style.visibility = 'hidden';
+        var span = document.getElementById('countdownCounter');
+        span.innerHTML = counter;
+      }
+      if (counter === 0) {
+        gameInput.style.visibility = 'visible';
+        document.getElementById('answer').focus();
+        span.innerHTML = 'GO!';
+      }
+      if (counter < 0) {
+        countdownCounter.style.visibility = 'hidden';
+        clearInterval(counter);
+      }
+    }, 1000);
+  })();
+};
 
 // function that reps the link to score.html
 var showScoreLink = function(){
   var scoreLink = document.getElementById('scoreLink');
   scoreLink.style.visibility = 'hidden';
-}
+};
 showScoreLink();
 //game timer
 var handleGameClock = function() {
@@ -160,9 +160,9 @@ var handleGameClock = function() {
       gameClock.innerHTML = gameCounter;
       if (gameCounter > 20) {
         gameClock.style.visibility = 'hidden';
-        };
+      }
       if (gameCounter === 20) {
-        gameClock.style.visibility = 'visible'
+        gameClock.style.visibility = 'visible';
       }
       if (gameCounter === 0) {
         gameClock.innerHTML = 'Time\'s Up!';
@@ -171,26 +171,26 @@ var handleGameClock = function() {
         totalAttemptsScores.push(new CreatePreviousScoreObject(d,kittyCounter));
         localStorage.setItem('scoresOfGamesPast', JSON.stringify(totalAttemptsScores));
         clearInterval(gameCounter);
-      };
+      }
       if (gameCounter === -1) {
         gameClock.style.visibility = 'hidden';
         scoreLink.style.visibility = 'visible';
         clearInterval(gameCounter);
-      };
+      }
     }, 1000);
   })();
 };
 
 var hideInstructions = function(){
   var instruct = document.getElementById('instructions');
-  instruct.style.visibility = 'hidden'
+  instruct.style.visibility = 'hidden';
   window.location.href = '#startAnchor';
-}
+};
 
 var button = document.getElementById('startGame');
 startGame.addEventListener('click', handleCountdown);
 startGame.addEventListener('click', handleGameClock);
 startGame.addEventListener('click', hideInstructions);
 
-var audio = document.getElementById("meowsound");
+var audio = document.getElementById('meowsound');
 audio.play();
