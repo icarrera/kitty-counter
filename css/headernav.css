@@ -101,6 +101,7 @@ header {
 }
 
 footer {
+  margin-top: 10px;
   text-align: center;
   font-style: italic;
   font-size: small;
