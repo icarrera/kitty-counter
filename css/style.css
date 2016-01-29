@@ -67,7 +67,7 @@ p#printQuestion {
   opacity: 1;
 }
 p#instructions {
-background-color:#CAA2DD;
+background-color:#C4C3D0;
 border-radius: 15px;
 box-shadow: 0px 0px 10px black;
 width: 50%;
@@ -78,7 +78,7 @@ text-align: center;
 border: 1px solid black;
 }
 p#instructions b{
-background-color:#CAA2DD;
+background-color:#C4C3D0;
 }
 
 #startGame {
@@ -190,9 +190,15 @@ canvas {
   padding: 1%;
   margin: 2%;
   color: #300032;
+  width: 10%;
 }
 
 #kitty-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
   background-color: #C4C3D0;
   padding: 1%;
   border-radius: 25px;
@@ -202,4 +208,19 @@ canvas {
   padding: 1%;
   margin: 2%;
   color: #300032;
+}
+h2 {
+  background-color: #50BFBD;
+  border: 1px solid white;
+  border-radius: 10px;
+  width: 70%;
+  margin: 1%;
+  padding: 1%;
+}
+article {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
 }
