@@ -106,7 +106,8 @@ div#emailBackground {
   justify-content: center;
   align-items: center;
   border: 1px solid black;
-  background: url(https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTUFjrB6Bulm8V1TiyPgFr1AZXajwOJhQdW-YivTm_Dz1sCnY2P) #382E1C;
+  background-image: url("../img/catback.jpg");
+  /*background-color: #C4C3D0;*/
   color: red;
   width: 75%;
   height: 300%;
@@ -116,7 +117,7 @@ div#emailBackground {
 
 label {
   background: transparent;
-  color: white;
+  color: black;
   margin: 1%;
 }
 input {
