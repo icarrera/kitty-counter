@@ -41,9 +41,7 @@
   color: white;
   width: 250px;
   height: 375px;
-  /*padding: 5px;*/
   transform: rotateY(180deg);
-  /*border-radius: 15px;*/
 }
 
 .back b{
@@ -106,18 +104,19 @@ div#emailBackground {
   justify-content: center;
   align-items: center;
   border: 1px solid black;
-  background: url(https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTUFjrB6Bulm8V1TiyPgFr1AZXajwOJhQdW-YivTm_Dz1sCnY2P) #382E1C;
-  color: red;
+  background-image: url("../img/catback.jpg");
   width: 75%;
   height: 300%;
   border-radius: 15px;
   padding: 1%;
+  box-shadow: 0 10px 6px -6px black;
 }
 
-label {
+label b{
   background: transparent;
   color: white;
   margin: 1%;
+  text-shadow: 1px 1px 1px black;
 }
 input {
   padding: 1%;
