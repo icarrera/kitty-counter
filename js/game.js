@@ -187,8 +187,8 @@ var handleGameClock = function() {
 var hideInstructions = function(){
   var instruct = document.getElementById('instructions');
   instruct.style.visibility = 'hidden'
+  window.location.replace = '#startAnchor';
 }
-
 
 var button = document.getElementById('startGame');
 startGame.addEventListener('click', handleCountdown);
