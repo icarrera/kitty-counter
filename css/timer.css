@@ -3,7 +3,7 @@
   color: #300032;
 }
 #countdownCounter {
-  font-size: 100px;
+  font-size: 50px;
   text-align: center;
   color: #5EC4B7;
   margin:1%;
@@ -14,7 +14,7 @@
 }
 
 #gameClock {
-  font-size: 100px;
+  font-size: 50px;
   text-align: center;
   color: #300032;
   margin:1%;
