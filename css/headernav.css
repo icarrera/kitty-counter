@@ -2,12 +2,12 @@
 *{
   font-family: Helvetica, Verdana, sans-serif;
   color: #300032;
+}
+
+body {
   background-color: #E0EFF1;
 }
 
-nav {
-  margin: 50px;
-}
 
 ul {
   overflow: auto;
@@ -19,17 +19,35 @@ header {
     justify-content: space-around;
     align-content: center;
     align-items: center;
-  }
+    border-style: solid;
+    border-color: #300032;
+    border-width: 1px;
+    border-radius: 30px;
+    background-color: #50BFBD;
+    box-shadow: 0 10px 6px -6px black;
+    margin-bottom: 5%;
+}
   .navstyle {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    padding: 5px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    width: 100%;
+    background-color: transparent;
+  }
+
+  .kittyTitle {
+    background-color: transparent;
+    margin-top: 0px;
+    margin-bottom: 0px;
   }
 
 .kittyTitle img {
   width: 250px;
   height: 250px;
-  }
+}
 
 .kittyTitle img:hover {
     -ms-transform: scale(1.5,1.5); /* IE 9 */
@@ -43,6 +61,7 @@ header {
   color: black;
   font: 25px/1 Helvetica, Verdana, sans-serif;
   text-transform: uppercase;
+  background-color: transparent;
 /*
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
@@ -52,7 +71,6 @@ header {
 }
 
 li {
-  height: 25px;
   float: left;
   margin-right: 5px;
   /*border-right: 1px solid #aaa;*/
