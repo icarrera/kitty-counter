@@ -1,7 +1,6 @@
 var allParticipantScores = [];
 var printScore = document.getElementById('your-score');
 var kittyScore = localStorage.getItem('scorePersist');
-// printScore.textContent = 'You got ' + kittyScore + ' kitties!';
 
 var attributeImages = ['img/cucumber.gif','img/dog.jpg','img/litterbox.jpg','img/bath-cat.jpg','img/cat_on_walk.jpg','img/sweater_cat.jpg','img/catnip.jpg','img/magic_cat.gif'];
 
@@ -12,8 +11,6 @@ function clearScoreArray() {
   if (localStorage.scoresOfGamesPast) {
     allParticipantScores = [];
     allParticipantScores = JSON.parse(localStorage.scoresOfGamesPast);
-  } else {
-    console.log('Local storage empty!! Initializing!');
   }
 }
 
@@ -26,7 +23,6 @@ function createList () {
     var listScore = document.createElement('li');
     var date = new Date(allParticipantScores[i].scoreDate);
     listScore.textContent = date + ': your score was ' + allParticipantScores[i].additionCount;
-    console.log('listScore');
     previousScores.appendChild(listScore);
   }
 }

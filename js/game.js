@@ -5,8 +5,8 @@ var imageNameArray = ['kittyimg1.png', 'kittyimg2.png', 'kittyimg3.png',
                       'kittyimg4.png', 'kittyimg5.png', 'kittyimg6.png',
                       'kittyimg7.png'];
 //function that randomizes a number between 0-300
-function randomMeow(min, max) {
-  return Math.floor(Math.random() * (max - min + 1)) + min;
+function randomMeow(minMeow, maxMeow) {
+  return Math.floor(Math.random() * (maxMeow - minMeow + 1)) + minMeow;
 }
 
 //function that loads the images into the new array
@@ -31,7 +31,7 @@ var picSize = canvasPort.width/5;
 var xMax = canvasPort.width - (picSize);
 var yMax = canvasPort.height - (picSize);
 var ctx = canvasPort.getContext('2d');
-//function that needs to be call within our correctness checker
+//function that needs to be called within our correctness checker
 function loadKitteh() {
   loadImages();
   var iHazKittehImage = randomCatImage();
@@ -42,13 +42,11 @@ function loadKitteh() {
 
 var totalAttemptsScores = [];
 
-
 function clearLSArray() {
   if (localStorage.scoresOfGamesPast) {
     totalAttemptsScores = [];
     totalAttemptsScores = JSON.parse(localStorage.scoresOfGamesPast);
   } else {
-    console.log('Local storage empty!! Initializing!');
     localStorage.setItem('scoresOfGamesPast', JSON.stringify(totalAttemptsScores));
   }
 }
@@ -83,7 +81,6 @@ var printQuestion = document.getElementById('printQuestion');
 function getRandomNumber () {
   randomNumber1 = randomMeow(1, 10);
   randomNumber2 = randomMeow(1, 10);
-  console.log('randomNumber1 is ' + randomNumber1 + '  randomNumber2 is ' + randomNumber2);
   printQuestion.textContent = randomNumber1 + ' + ' + randomNumber2 + ' =';
 }
 getRandomNumber();
@@ -93,13 +90,11 @@ var element = document.getElementById('submitAnswer');
 
 //event handler for the answer submission form
 function questionRandomizer(event) {
-  console.log(event); // so you can see what the comment is
   event.preventDefault(); //stop the default behavior of the submit event
   //store the new inputs as new objects for ease of use
   var answer = parseFloat(event.target.answer.value);
 //if/else statement, judges whether the input is correct
   if (answer === (randomNumber1 + randomNumber2)) {
-    console.log('Great job!');
     kittyCounter += 1;
     loadKitteh();
 //sound if answer correct
@@ -107,7 +102,6 @@ function questionRandomizer(event) {
     audio.play();
   }
     else {
-    console.log('not the right answer');
   }
   event.target.answer.value = null;
   localStorage.setItem('scorePersist',JSON.stringify(kittyCounter));
